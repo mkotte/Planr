@@ -61,6 +61,7 @@ FRONTEND
 * Implement early Drag and Drop functionality
 
 BACKEND
+* Create simple seed files, for functionality assessment
 * Create user login's, cookies and properly encrypt information
 * Create the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
 
@@ -75,7 +76,7 @@ FRONTEND
 BACKEND
 * Test and complete all routing 
 * Thouroughly debug 
-* Seed project starter template/s
+* Thouroughly seed project starter template/s
 
 TIME PERMITTING
 * Add google oauth
@@ -123,5 +124,5 @@ TIME PERMITTING
 [Bulma Install](https://bulma.io/documentation/customize/with-webpack/)
 [Bulma Doc's](https://bulma.io/documentation/)
 [Drag and Drop tutorial](https://www.youtube.com/watch?v=OHTudicK7nY)
-
+[MVP Goal / reference](https://kanbanflow.com/)
 --> 
