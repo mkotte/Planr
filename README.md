@@ -1,4 +1,3 @@
-<!-- 
 # Project Idea
 ## Project Management System (ex: trello.com)
 ### Technology To Use
@@ -41,17 +40,17 @@ Day - 1
 (Jesse - backend (routing) focus / willing to bounce around)
 (Mitch - backend / db focus, preferred)
 (Mike - flex)
-(Anthony - tbd)
+(Anthony - frontend, html + handlebars)
 
 ## Tasks 
 ### Day 1 - Early Priorities
 * Wire Framing, keeping mobile friendly in mind *(Mike - before class)
-* HTML frame of project board, simple styling (Anthony/Mike)
-* HTML frame of the home board (Anthony/Mike)
+* HTML frame of project board, simple styling (Anthony)
+* HTML frame of the home board (Anthony)
 * Early stages of styling / theme selection w/ responsiveness in mind (bulma *css) (Anthony/Mike)
 * Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch)
 * API Routing (Jesse)
-* Appending + Fetching relevant data to create the project boards using assets/index.js (Anthony/Mike)
+* Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
 * Create server.js *(Mitch)
 
 ### Day 2/3 - Functionality
@@ -125,4 +124,3 @@ TIME PERMITTING
 [Bulma Doc's](https://bulma.io/documentation/)
 [Drag and Drop tutorial](https://www.youtube.com/watch?v=OHTudicK7nY)
 [MVP Goal / reference](https://kanbanflow.com/)
---> 
