@@ -1,4 +1,3 @@
-<!-- 
 # Project Idea
 ## Project Management System (ex: trello.com)
 ### Technology To Use
@@ -125,4 +124,3 @@ TIME PERMITTING
 [Bulma Doc's](https://bulma.io/documentation/)
 [Drag and Drop tutorial](https://www.youtube.com/watch?v=OHTudicK7nY)
 [MVP Goal / reference](https://kanbanflow.com/)
---> 
