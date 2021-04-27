@@ -7,7 +7,7 @@
 * Express (Handlebars.js)
 * Node.js (dotenv, bcrypt)
 * Heroku, for deployement
-* Encryption/Authentication for access (google*?)
+* Encryption/Authentication for access (bcrypt, google*?)
 
 ### Desired Functionality
 * Collaborative use between different user's on project boards
@@ -24,6 +24,15 @@
 * Templates for project boards (seeded information)
 * Light / Dark switch
 * Logo / Branding designs
+* Alert's of completed tasks etc
+
+### Difficulties / Uncharted Territories
+* Updating for multiples user's 
+* Login authentication's, how to store the information
+* Drag and Drop Functionality
+* HandleBars Frame
+* Project Scope
+
 
 If group is on board, task's need to be discussed and assigned based on priority.
 
