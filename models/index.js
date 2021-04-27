@@ -22,7 +22,7 @@
 // * ID (PK)
 // * Title
 // * Comments/Descriptions
-// * Position
+// * Positions (x + y needed integer)
 // * Card ID (FK)
 
 // TODO: create, then import models required here
