@@ -1,0 +1,26 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "Project Management Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkotte/project2.git"
+  },
+  "keywords": [
+    "adecapite",
+    "Schimmoellerm",
+    "mkotte",
+    "rutter10"
+  ],
+  "author": "adecapite Scimmoellerm mkotte rutter10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkotte/project2/issues"
+  },
+  "homepage": "https://github.com/mkotte/project2#readme"
+}
