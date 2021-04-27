@@ -121,6 +121,9 @@ TIME PERMITTING
 
 ## Resources
 [Bulma Install](https://bulma.io/documentation/customize/with-webpack/)
+
 [Bulma Doc's](https://bulma.io/documentation/)
+
 [Drag and Drop tutorial](https://www.youtube.com/watch?v=OHTudicK7nY)
+
 [MVP Goal / reference](https://kanbanflow.com/)
