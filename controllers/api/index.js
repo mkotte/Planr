@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
-// TODO: Create specific routes here
-// const commentRoutes = require('./comment-routes');
-// const postRoutes = require('./post-routes');
-// const userRoutes = require('./user-routes');
+//Create specific routes here
+const cardRoutes = require('./cardRoutes');
+const boardRoutes = require('./boardRoutes');
+const taskRoutes = require('./taskRoutes');
 
-// router.use('/comments', commentRoutes);
-// router.use('/posts', postRoutes);
-// router.use('/users', userRoutes);
+router.use('/cardRoutes', cardData);
+router.use('/boardRoutes', boardData);
+router.use('/taskRoutes', taskData);
 
 module.exports = router;
