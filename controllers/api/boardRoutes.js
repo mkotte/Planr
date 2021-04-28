@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   // find all boards
   try{
     const boardData = await Board.findAll()
-    res.status(200).json(boardDatat)
+    res.status(200).json(boardData)
   } catch (err) {
     res.status(500).json(err)
   }

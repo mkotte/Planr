@@ -55,15 +55,15 @@ Day - 1
 
 ### Day 2/3 - Functionality
 FRONTEND
-* HTML pages, homepage/main and project pages (Anthony)
+* HTML pages, homepage/main and project pages ect (Anthony)
 * Create forms to create project boards, cards, posts and comments (possibly use handlebars.js for cards/posts/comments)
 * Implement early Drag and Drop functionality (Mike)
 * Add routes for handlebars routing to pages
 
-BACKEND
+BACKEND (Jesse / Mitchell)
 * Heroku settup then >
 * Create simple seed files, for functionality assessment
-* Debugging / testing routes
+* Debugging / testing routes 
 * Create user login's, cookies and properly encrypt information
 * Create the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
 
