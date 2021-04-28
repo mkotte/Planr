@@ -22,7 +22,6 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({message: 'No location found with this ID!'})
       return
     }
-
     res.status(200).json(boardData)
   } catch (err){
     res.status(500).json(err)
@@ -46,6 +45,7 @@ router.put('/:id', async(req, res) => {
     if (!boardData){
       res.status(404).json({message: 'No location found with this id!'})
     }
+    res.status(200).json({message:'Successfully updated'})
   } catch (err){
     res.status(404).json(err)
   }
@@ -55,9 +55,10 @@ router.delete('/:id', async (req, res) => {
   // delete on board by its `id` value
   try{
     const boardData = await Board.destroy( {where: {id: req.params.id}})
-    if (!categoryData){
+    if (!boardData){
       res.status(404).json({message:'No location found with this ID!'})
     }
+    res.status(200).json({message:'Successfully deleted'})
   } catch (err){
     res.status(500).json(err)
   }

@@ -24,12 +24,13 @@ router.get('/:id', async (req, res) => {
       include: Board
     })
 
-    if(!categroyData) {
+    if(!cardData) {
       res.status(404).json({message: 'No location found with this id!'})
       return
     }
 
     res.status(200).json(cardData)
+
   } catch (err){
     res.status(500).json(err)
   }
@@ -53,6 +54,7 @@ router.put('/:id', async (req, res) => {
     if (!cardData){
       res.status(404).json({message: 'No location found with this ID!'})
     }
+    res.status(200).json({message:'Successfully updated'})
   } catch (err) {
     res.status(404).json(err)
   }
@@ -65,6 +67,7 @@ router.delete('/:id', async (req, res) => {
     if(!cardData){
       res.status(404).json({ message: 'No location found with this id!'})
     }
+    res.status(200).json({message:'Successfully deleted'})
   } catch (err){
     res.status(500).json(err)
   }
