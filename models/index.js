@@ -26,7 +26,32 @@
 // * Card ID (FK)
 
 // TODO: create, then import models required here
+const Board = require('./Board');
+const Card = require('./Card');
+const Task = require('./Task');
+const User = require('./User');
 
 // TODO: declare associations here
 
+//board/card relationship
+Board.hasMany(Card, {
+    foreignKey: 'board_id',
+});
+
+Card.belongsTo(Board, {
+    foreignKey: 'board_id',
+});
+
+
+//card/task relationship
+Card.hasMany(Task, {
+    foreignKey: 'card_id',
+});
+
+Task.belongsTo(Card, {
+    foreignKey: 'card_id',
+});
+
+
 // TODO: export module here
+module.exports = { Board, Card, Task, User };
