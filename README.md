@@ -44,23 +44,26 @@ Day - 1
 
 ## Tasks 
 ### Day 1 - Early Priorities
-* Wire Framing, keeping mobile friendly in mind *(Mike - before class)
+<!-- * Wire Framing, keeping mobile friendly in mind *(Mike - before class) -->
 * HTML frame of project board, simple styling (Anthony)
 * HTML frame of the home board (Anthony)
 * Early stages of styling / theme selection w/ responsiveness in mind (bulma *css) (Anthony/Mike)
-* Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch)
-* API Routing (Jesse)
+<!-- * Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch) -->
+<!-- * API Routing (Jesse) -->
 * Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
-* Create server.js *(Mitch)
+<!-- * Create server.js *(Mitch) -->
 
 ### Day 2/3 - Functionality
 FRONTEND
-* HTML pages, homepage/main and project pages
+* HTML pages, homepage/main and project pages (Anthony)
 * Create forms to create project boards, cards, posts and comments (possibly use handlebars.js for cards/posts/comments)
-* Implement early Drag and Drop functionality
+* Implement early Drag and Drop functionality (Mike)
+* Add routes for handlebars routing to pages
 
 BACKEND
+* Heroku settup then >
 * Create simple seed files, for functionality assessment
+* Debugging / testing routes
 * Create user login's, cookies and properly encrypt information
 * Create the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
 
