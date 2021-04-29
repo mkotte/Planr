@@ -54,6 +54,10 @@ Day - 1
 <!-- * Create server.js *(Mitch) -->
 
 ### Day 2 - Functionality Assesments
+First take time to regroup, assess where we are currently and what everyone is working on. 
+Then discuss what we want to accomplish by class or before day 3. 
+Finally remind everyone to pull down, then break off and start working.
+
 FRONTEND (Anthony / Mike)
 * HTML BUTTON's (LOG IN / SIGN UP) and respective forms finished by end of class. (Anthony)
 * HTML (handlebars) page for homepage/main near completetion (Anthony)
@@ -63,17 +67,20 @@ FRONTEND (Anthony / Mike)
 * Add routes for handlebars routing to pages (Mike)
 
 BACKEND (Jesse / Mitchell)
-* Heroku settup(Mike, first priority)
+* Heroku settup(Mike, early priority)
 * Fixing controllers/api/index.js (Jesse, first priority)
 * Create simple seed files, for functionality assessment (Mitchell + Jesse)
 * Debugging / testing routes (Mitchell + Jesse)
 * If finished early, move on to day 3 work 
 
+BY Day 3 we should have the project page displaying through handlebars(with seeded information), application deployed onto heroku, all completed routes tested + debugged and a semi-finished homepage displaying early log-in and sign-up information.
+
+
 ### Day 3 - Functionality Completion, Login/Auth
 FRONTEND 
 * Handlebars user page (Anthony)
-* 
-* Create forms to create project boards, cards, tasks and task information
+* Project board view finished and drag-n-drop functionality working as expected (Mike)
+* Create forms to create project boards, cards, tasks and task information (Anyone)
 
 BACKEND (Jesse / Mitchell)
 * Create user login's, cookies and properly encrypt information
