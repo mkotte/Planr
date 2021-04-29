@@ -10,4 +10,4 @@ CREATE TABLE card (
 );
 
 INSERT INTO card (id, title, position, board_id)
-VALUES (1, "title1", 1, 1), (2, "title2", 2, 2), (3, "title3", 3, 3);
+VALUES (0, "title0", 0, 0), (1, "title1", 1, 1), (2, "title2", 2, 2);
