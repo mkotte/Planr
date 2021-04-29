@@ -8,8 +8,9 @@ router.get('/', async (req, res) => {
 // find all cards
 // be sure to include its associated Board data
   try {
-    const cardData = await Card.findAll()
+    const cardData = await Card.findAll({include: {board: {boardName: boardName}}})
     res.status(200).json(cardData)
+    res.render("filename", cardData)
   } catch (err) {
     res.status(500).json(err)
   }

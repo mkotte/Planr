@@ -37,10 +37,10 @@ If group is on board, task's need to be discussed and assigned based on priority
 
 ---
 Day - 1 
-(Jesse - backend (routing) focus / willing to bounce around)
-(Mitch - backend / db focus, preferred)
+(Jesse - backend routing focus / willing to bounce around)
+(Mitch - backend / db focus)
 (Mike - flex)
-(Anthony - frontend, html + handlebars)
+(Anthony - frontend, html + handlebars focus)
 
 ## Tasks 
 ### Day 1 - Early Priorities
@@ -53,19 +53,32 @@ Day - 1
 * Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
 <!-- * Create server.js *(Mitch) -->
 
-### Day 2/3 - Functionality
-FRONTEND
-* HTML pages, homepage/main and project pages ect (Anthony)
-* Create forms to create project boards, cards, posts and comments (possibly use handlebars.js for cards/posts/comments)
+### Day 2 - Functionality Assesments
+FRONTEND (Anthony / Mike)
+* HTML BUTTON's (LOG IN / SIGN UP) and respective forms finished by end of class. (Anthony)
+* HTML (handlebars) page for homepage/main near completetion (Anthony)
+* HTML (handlebars) page for the rendered project boards presenting sample data (Mike)
+* assets/script.js or assets/drag-n-drop.js file updating route positions OnEND() and near working by end of class (Mike) 
 * Implement early Drag and Drop functionality (Mike)
-* Add routes for handlebars routing to pages
+* Add routes for handlebars routing to pages (Mike)
 
 BACKEND (Jesse / Mitchell)
-* Heroku settup then >
-* Create simple seed files, for functionality assessment
-* Debugging / testing routes 
+* Heroku settup(Mike, first priority)
+* Fixing controllers/api/index.js (Jesse, first priority)
+* Create simple seed files, for functionality assessment (Mitchell + Jesse)
+* Debugging / testing routes (Mitchell + Jesse)
+* If finished early, move on to day 3 work 
+
+### Day 3 - Functionality Completion, Login/Auth
+FRONTEND 
+* Handlebars user page (Anthony)
+* 
+* Create forms to create project boards, cards, tasks and task information
+
+BACKEND (Jesse / Mitchell)
 * Create user login's, cookies and properly encrypt information
 * Create the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
+
 
 ### Day 4/5 - Debugging, ReAssessing
 Access where we are, what we have left to complete and what extra functionalities we would like to include
@@ -130,3 +143,5 @@ TIME PERMITTING
 [Drag and Drop tutorial](https://www.youtube.com/watch?v=OHTudicK7nY)
 
 [MVP Goal / reference](https://kanbanflow.com/)
+
+[Simple WireFrame](https://docs.google.com/presentation/d/1TeOepEL9TuoyOichqtosXRYTOqUkCyeTl7oAkW3Yi5U/edit?usp=sharing)

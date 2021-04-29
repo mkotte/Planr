@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
   try{
     const boardData = await Board.findAll()
     res.status(200).json(boardData)
+    // res.render('filename', boardData)
   } catch (err) {
     res.status(500).json(err)
   }
