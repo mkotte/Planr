@@ -1,12 +1,13 @@
 # Project Idea
 ## Project Management System (ex: trello.com)
 ### Technology To Use
-* Bulma -CSS-  (*New Technology / npm package*)
+* Bootstrap -CSS-  
 * MYSQl (Sequelize(ORM), + Professional Appearing Seed File's)
 * Express (Handlebars.js)
 * Node.js (dotenv, bcrypt)
 * Heroku, for deployement
 * Encryption/Authentication for access (bcrypt, google*?)
+* SortableJS (New Technology)
 
 ### Desired Functionality
 * Collaborative use between different user's on project boards
