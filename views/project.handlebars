@@ -1,26 +1,26 @@
 {{!-- this is where we will be able to view selected/individual project board and render all information here --}}
+{{!-- TODO: create routes exporting required information to presernt in handlebars.js --}}
 
 <main class="columns">
     <div class="board-title-wrapper"> 
         <h2>{{board title}}</h2>
     </div>
-
+    {{!-- iterate through each card here, based on posistion--}}
     {{{ each card }}}
+
         <div class="column card-wrapper">
             <div class="title-wrapper">
                 <h2 class="title">{{card title}}</h2>
             </div>
-            <!-- will iterate through card-wrapper-task body for drag and drop -->
+            <!-- will iterate through task's dependant on position and fk card_id -->
             <div class="task-body-wrapper">
                 <!-- repeating loop + partial for tasks will be here -->
-                <div class="card-name-id">
-                    <div class="task-id-title">
-                        <h3 class="task-title">Task Title Goes Here {{title}}</h3>
-                        <p class="task-description">Task description goes here{{{description}}}</p>
-                    </div>
-                </div>
+                
+                {{ > tasks }}
+
             </div>
         </div> 
+
     {{{ /each }}}
     
 </main>
