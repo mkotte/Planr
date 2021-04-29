@@ -1,12 +1,13 @@
 # Project Idea
 ## Project Management System (ex: trello.com)
 ### Technology To Use
-* Bulma -CSS-  (*New Technology / npm package*)
+* Bootstrap -CSS-  
 * MYSQl (Sequelize(ORM), + Professional Appearing Seed File's)
 * Express (Handlebars.js)
 * Node.js (dotenv, bcrypt)
 * Heroku, for deployement
 * Encryption/Authentication for access (bcrypt, google*?)
+* SortableJS (New Technology)
 
 ### Desired Functionality
 * Collaborative use between different user's on project boards
@@ -48,9 +49,9 @@ Day - 1
 * HTML frame of project board, simple styling (Anthony)
 * HTML frame of the home board (Anthony)
 * Early stages of styling / theme selection w/ responsiveness in mind (bulma *css) (Anthony/Mike)
+* Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
 <!-- * Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch) -->
 <!-- * API Routing (Jesse) -->
-* Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
 <!-- * Create server.js *(Mitch) -->
 
 ### Day 2 - Functionality Assesments
