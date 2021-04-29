@@ -25,15 +25,15 @@
 // * Positions (x + y needed integer)
 // * Card ID (FK)
 
-// TODO: create, then import models required here
+// create, then import models required here
 const Board = require('./Board');
 const Card = require('./Card');
 const Task = require('./Task');
 const User = require('./User');
 
-// TODO: declare associations here
+// declared associations here
 
-//board/card relationship
+// board-card relationship
 Board.hasMany(Card, {
     foreignKey: 'board_id',
 });
@@ -43,7 +43,7 @@ Card.belongsTo(Board, {
 });
 
 
-//card/task relationship
+// card-task relationship
 Card.hasMany(Task, {
     foreignKey: 'card_id',
 });

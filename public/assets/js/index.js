@@ -6,3 +6,6 @@
 // TODO: create drag and drop functionality, first on tasks "then cards, time permitting" 
 
 // TODO: add event listeners (bottom) for button presses (i.e. login, project boards etc)
+
+// fetch api routes for handlebars here
+// object card including title and post
