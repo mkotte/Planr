@@ -48,9 +48,9 @@ Day - 1
 * HTML frame of project board, simple styling (Anthony)
 * HTML frame of the home board (Anthony)
 * Early stages of styling / theme selection w/ responsiveness in mind (bulma *css) (Anthony/Mike)
+* Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
 <!-- * Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch) -->
 <!-- * API Routing (Jesse) -->
-* Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
 <!-- * Create server.js *(Mitch) -->
 
 ### Day 2 - Functionality Assesments
