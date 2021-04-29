@@ -15,8 +15,17 @@ Board.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        UserID
+        UserID: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
         // * User ID's (need to think of how to give user's access to specific project boards)
+    }
+    {
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'board',
     }
 );
 
