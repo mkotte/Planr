@@ -2,19 +2,19 @@ const { Board } = require('../models')
 
 const boardData = [
     {
-        id: 0,
-        boardName: "Name0",
-        UserID: 0,
-    },
-    {
         id: 1,
-        boardName: "Name1",
+        boardName: "Name0",
         UserID: 1,
     },
     {
         id: 2,
         boardName: "Name2",
         UserID: 2,
+    },
+    {
+        id: 3,
+        boardName: "Name3",
+        UserID: 3,
     }
 ];
 

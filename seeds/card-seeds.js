@@ -2,10 +2,10 @@ const { Board, Card } = require('../models')
 
 const cardData = [
     {
-        id: 0,
-        title: "Title0",
+        id: 1,
+        title: "Title1",
         position: 0,
-        board_id: 0
+        board_id: 1
     },
     {
         id: 2,

@@ -53,7 +53,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   // update a card's name by its `id` value
   try {
-    const cardData = await Card.update ({where: {id: req.params.id}})
+    const cardData = await Card.update({where: {id: req.params.id}})
     if (!cardData){
       res.status(404).json({message: 'No location found with this ID!'})
     }
@@ -67,7 +67,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete on card by its `id` value
   try {
-    const cardData = await Card.destroy ( {where: {id: requestAnimationFrame.params.id}} )
+    const cardData = await Card.destroy( {where: {id: requestAnimationFrame.params.id}} )
     if(!cardData){
       res.status(404).json({ message: 'No location found with this id!'})
     }
