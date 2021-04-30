@@ -11,7 +11,7 @@ Board.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        boardName: {
             type: DataTypes.STRING,
             allowNull: false,
         },

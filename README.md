@@ -1,12 +1,13 @@
 # Project Idea
 ## Project Management System (ex: trello.com)
 ### Technology To Use
-* Bulma -CSS-  (*New Technology / npm package*)
+* Bootstrap -CSS-  
 * MYSQl (Sequelize(ORM), + Professional Appearing Seed File's)
 * Express (Handlebars.js)
 * Node.js (dotenv, bcrypt)
 * Heroku, for deployement
 * Encryption/Authentication for access (bcrypt, google*?)
+* SortableJS (New Technology)
 
 ### Desired Functionality
 * Collaborative use between different user's on project boards
@@ -37,32 +38,55 @@ If group is on board, task's need to be discussed and assigned based on priority
 
 ---
 Day - 1 
-(Jesse - backend (routing) focus / willing to bounce around)
-(Mitch - backend / db focus, preferred)
+(Jesse - backend routing focus / willing to bounce around)
+(Mitch - backend / db focus)
 (Mike - flex)
-(Anthony - frontend, html + handlebars)
+(Anthony - frontend, html + handlebars focus)
 
 ## Tasks 
 ### Day 1 - Early Priorities
-* Wire Framing, keeping mobile friendly in mind *(Mike - before class)
+<!-- * Wire Framing, keeping mobile friendly in mind *(Mike - before class) -->
 * HTML frame of project board, simple styling (Anthony)
 * HTML frame of the home board (Anthony)
 * Early stages of styling / theme selection w/ responsiveness in mind (bulma *css) (Anthony/Mike)
-* Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch)
-* API Routing (Jesse)
 * Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
-* Create server.js *(Mitch)
+<!-- * Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch) -->
+<!-- * API Routing (Jesse) -->
+<!-- * Create server.js *(Mitch) -->
 
-### Day 2/3 - Functionality
-FRONTEND
-* HTML pages, homepage/main and project pages
-* Create forms to create project boards, cards, posts and comments (possibly use handlebars.js for cards/posts/comments)
-* Implement early Drag and Drop functionality
+### Day 2 - Functionality Assesments
+First take time to regroup, assess where we are currently and what everyone is working on. 
+Then discuss what we want to accomplish by class or before day 3. 
+Finally remind everyone to pull down, then break off and start working.
 
-BACKEND
-* Create simple seed files, for functionality assessment
+FRONTEND (Anthony / Mike)
+* HTML BUTTON's (LOG IN / SIGN UP) and respective forms finished by end of class. (Anthony)
+* HTML (handlebars) page for homepage/main near completetion (Anthony)
+* HTML (handlebars) page for the rendered project boards presenting sample data (Mike)
+* assets/script.js or assets/drag-n-drop.js file updating route positions OnEND() and near working by end of class (Mike) 
+* Implement early Drag and Drop functionality (Mike)
+* Add routes for handlebars routing to pages (Mike)
+
+BACKEND (Jesse / Mitchell)
+* Heroku settup(Mike, early priority)
+* Fixing controllers/api/index.js (Jesse, first priority)
+* Create simple seed files, for functionality assessment (Mitchell + Jesse)
+* Debugging / testing routes (Mitchell + Jesse)
+* If finished early, move on to day 3 work 
+
+BY Day 3 we should have the project page displaying through handlebars(with seeded information), application deployed onto heroku, all completed routes tested + debugged and a semi-finished homepage displaying early log-in and sign-up information.
+
+
+### Day 3 - Functionality Completion, Login/Auth
+FRONTEND 
+* Handlebars user page (Anthony)
+* Project board view finished and drag-n-drop functionality working as expected (Mike)
+* Create forms to create project boards, cards, tasks and task information (Anyone)
+
+BACKEND (Jesse / Mitchell)
 * Create user login's, cookies and properly encrypt information
 * Create the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
+
 
 ### Day 4/5 - Debugging, ReAssessing
 Access where we are, what we have left to complete and what extra functionalities we would like to include
@@ -127,3 +151,5 @@ TIME PERMITTING
 [Drag and Drop tutorial](https://www.youtube.com/watch?v=OHTudicK7nY)
 
 [MVP Goal / reference](https://kanbanflow.com/)
+
+[Simple WireFrame](https://docs.google.com/presentation/d/1TeOepEL9TuoyOichqtosXRYTOqUkCyeTl7oAkW3Yi5U/edit?usp=sharing)
