@@ -33,7 +33,7 @@ User.init(
         },
         // * Password (Encrypted using bcrypt)
         password: {
-            type: DateTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [/*need to decide a length for passwords*/],
