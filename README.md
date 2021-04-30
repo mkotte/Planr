@@ -68,7 +68,6 @@ FRONTEND (Anthony / Mike)
 * Add routes for handlebars routing to pages (Mike)
 
 BACKEND (Jesse / Mitchell)
-* Heroku settup(Mike, early priority)
 * Fixing controllers/api/index.js (Jesse, first priority)
 * Create simple seed files, for functionality assessment (Mitchell + Jesse)
 * Debugging / testing routes (Mitchell + Jesse)
@@ -84,6 +83,7 @@ FRONTEND
 * Create forms to create project boards, cards, tasks and task information (Anyone)
 
 BACKEND (Jesse / Mitchell)
+* Heroku settup(Mike, early priority)
 * Create user login's, cookies and properly encrypt information
 * Create the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
 
