@@ -4,18 +4,19 @@ const { Card, Board } = require('../../models');
 
 // The `/api/cards` endpoint
 
+// TODO: Debug!
 router.get('/', async (req, res) => {
 // find all cards
 // be sure to include its associated Board data
   try {
     const cardData = await Card.findAll({include: {board: {boardName: boardName}}})
     res.status(200).json(cardData)
-    res.render("filename", cardData)
   } catch (err) {
     res.status(500).json(err)
   }
 })  
 
+// Working!
 router.get('/:id', async (req, res) => {
   // find a single card by its `id`
   // be sure to include its associated Board data
@@ -37,7 +38,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-
+// Working!
 router.post('/', async (req, res) => {
   // create a new card
   try {
@@ -48,6 +49,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// TODO: DEBUG!
 router.put('/:id', async (req, res) => {
   // update a card's name by its `id` value
   try {
@@ -61,6 +63,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// TODO: DEBUG
 router.delete('/:id', async (req, res) => {
   // delete on card by its `id` value
   try {
