@@ -3,6 +3,7 @@ const { Task, Card } = require('../../models');
 
 // The `/api/cards` endpoint
 
+// Working
 router.get('/', async (req, res) => {
   // find all task's
   // be sure to include its associated card data
@@ -14,6 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Working
 router.get('/:id', async (req, res) => {
   // find a single task by its `id`
   // be sure to include its associated card data
@@ -21,7 +23,7 @@ router.get('/:id', async (req, res) => {
     const taskData = await Task.findByPk(req.params.id, {
       include: Card
     })
-    
+
     if(!taskData) {
       res.status(404).json({message: 'No location found with this ID!'})
       return
@@ -32,6 +34,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Working
 router.post('/', async (req, res) => {
   // create a new task
   try{
@@ -42,6 +45,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// TODO: Debug
 router.put('/:id', async (req, res) => {
   // update a task's name by its `id` value
   try{
@@ -55,6 +59,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// Working
 router.delete('/:id', async (req, res) => {
   // delete on task by its `id` value
   try{
