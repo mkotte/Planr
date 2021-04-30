@@ -5,16 +5,16 @@ const seedUser = require('./user-seeds');
 
 const sequelize = require('../config/connection');
 
-const seedAll = async () => {
-    await sequelize.sync({ force:true });
+const seedAll = () => {
+    sequelize.sync({ force:true });
     console.log('\n----- DATABASE SYNCED -----\n');
-    await seedBoard();
+    seedBoard();
     console.log('\n----- BOARDS SEEDED -----\n');
-    await seedCard();
+    seedCard();
     console.log('\n----- CARDS SEEDED -----\n');
-    await seedTask();
+    seedTask();
     console.log('\n----- TASKS SEEDED -----\n');
-    await seedUser();
+    seedUser();
     console.log('\n----- USERS SEEDED -----\n');
 
     process.exit(0);

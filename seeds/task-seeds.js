@@ -15,7 +15,7 @@ const taskData = [
         description: "we do a little task here",
         positionX: 2,
         positionY: 1,
-        card_id: 1
+        card_id: 0
     },
     {
         id: 2,

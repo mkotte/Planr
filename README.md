@@ -153,3 +153,46 @@ TIME PERMITTING
 [MVP Goal / reference](https://kanbanflow.com/)
 
 [Simple WireFrame](https://docs.google.com/presentation/d/1TeOepEL9TuoyOichqtosXRYTOqUkCyeTl7oAkW3Yi5U/edit?usp=sharing)
+
+
+
+### JSON SEED SAMPLES 
+
+api/Boards:
+
+    {
+        "id": 0,
+        "boardName": "Name0",
+        "UserID": 0
+    },
+    {
+        "id": 1,
+        "boardName": "Name1",
+        "UserID": 1
+    },
+    {
+        "id": 2,
+        "boardName": "Name2",
+        "UserID": 2
+    }
+
+api/Cards:
+
+    {
+        "id": 0,
+        "title": "Title0",
+        "position": 0,
+        "board_id": 0
+    },
+    {
+        "id": 1,
+        "title": "Title1",
+        "position": 1,
+        "board_id": 1
+    },
+    {
+        "id": 2,
+        "title": "Title2",
+        "position": 2,
+        "board_id": 2
+    }

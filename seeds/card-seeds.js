@@ -11,7 +11,7 @@ const cardData = [
         id: 2,
         title: "Title2",
         position: 0,
-        board_id: 3
+        board_id: 1
     },
     {
         id: 3,
