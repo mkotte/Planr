@@ -11,8 +11,8 @@ const taskRoutes = require('./taskRoutes');
 // the second paramater is where we are pulling the information routes for the api called 
 // (where are we already requiring the files including the specific routing information?)
 
-router.use('/api/cards', cardRoutes);
-router.use('/api/boards', boardRoutes);
-router.use('/api/tasks', taskRoutes);
+router.use('/cards', cardRoutes);
+router.use('/boards', boardRoutes);
+router.use('/tasks', taskRoutes);
 
 module.exports = router;
