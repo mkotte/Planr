@@ -20,7 +20,7 @@ Board.init(
             allowNull: false,
         }
         // * User ID's (need to think of how to give user's access to specific project boards)
-    }
+    },
     {
         sequelize,
         freezeTableName: true,
