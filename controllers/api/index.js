@@ -5,8 +5,8 @@ const cardRoutes = require('./cardRoutes');
 const boardRoutes = require('./boardRoutes');
 const taskRoutes = require('./taskRoutes');
 
-router.use('/api/cards', cardRoutes);
-router.use('/api/boards', boardRoutes);
-router.use('/api/tasks', taskRoutes);
+router.use('/cards', cardRoutes);
+router.use('/boards', boardRoutes);
+router.use('/tasks', taskRoutes);
 
 module.exports = router;
