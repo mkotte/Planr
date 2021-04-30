@@ -30,5 +30,3 @@ const grabTaskData = () => {
 
 // fetch api routes for handlebars here
 // object card including title and post
-
-

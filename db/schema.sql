@@ -1,6 +1,6 @@
 -- TODO: rename database
 -- DROP DATABASE
-DROP DATABASE IF EXISTS project_db
+DROP DATABASE IF EXISTS project_db;
 
 -- CREATE DATABASE 
-CREATE DATABASE project_db
+CREATE DATABASE project_db;
