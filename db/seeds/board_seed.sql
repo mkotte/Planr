@@ -8,4 +8,4 @@ CREATE TABLE board (
 );
 
 INSERT INTO board (id, name, userID)
-VALUES (0, 'Name0', 'User0'), (1, 'Name0', 'User0'), (2, 'Name0', 'User0');
+VALUES (0, "Name0", "User0"), (1, "Name0", "User0"), (2, "Name0", "User0");
