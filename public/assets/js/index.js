@@ -17,7 +17,9 @@ const createTasks = (data) => {
     taskWrapper.appendChild(taskDescription);
 }
 
-
+const grabTaskData = () => {
+    fetch("/api/tasks")
+}
 
 
 
