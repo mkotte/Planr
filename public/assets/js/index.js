@@ -28,5 +28,3 @@ const createTasks = (data) => {
 
 // fetch api routes for handlebars here
 // object card including title and post
-
-
