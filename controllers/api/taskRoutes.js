@@ -49,7 +49,11 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   // update a task's name by its `id` value
   try{
-    const taskData = await Task.update({where: {id: req.params.id}})
+    const taskData = await Task.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!taskData){
       res.status(404).json({message: 'No location found with this ID!'})
     }
