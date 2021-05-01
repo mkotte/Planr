@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// TODO: Debug
+// working, same issue as board
 router.put('/:id', async (req, res) => {
   // update a task's name by its `id` value
   try{
