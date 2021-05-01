@@ -2,7 +2,7 @@
   "name": "project2",
   "version": "1.0.0",
   "description": "Project Management Application",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "npm run test",
     "start": "node server.js"
