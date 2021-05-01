@@ -16,11 +16,11 @@ router.get('/', async (req, res) => {
 });
 
 
-// TODO: DEBUG!
+// Working! its a lowercase k in findByPk
 router.get('/:id', async (req, res) => {
   // find a single board by its `id`
   try{
-    const boardData = await Board.findByPK({where: {id: req.params.id}})
+    const boardData = await Board.findByPk(req.params.id)
     
     if(!boardData){
       res.status(404).json({message: 'No location found with this ID!'})
