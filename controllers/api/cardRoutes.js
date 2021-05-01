@@ -51,11 +51,15 @@ router.post('/', async (req, res) => {
   }
 });
 
-// TODO: DEBUG!
+// working same issue as boards router
 router.put('/:id', async (req, res) => {
   // update a card's name by its `id` value
   try {
-    const cardData = await Card.update({where: {id: req.params.id}})
+    const cardData = await Card.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!cardData){
       res.status(404).json({message: 'No location found with this ID!'})
     }
