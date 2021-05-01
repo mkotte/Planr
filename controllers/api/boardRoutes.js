@@ -48,11 +48,15 @@ router.post('/', async (req, res) => {
 });
 
 
-// TODO: DEBUG!
+// working needed req.body, before where
 router.put('/:id', async(req, res) => {
   // update a board's name by its `id` value
   try{
-    const boardData = await Board.update({where: {id: req.params.id}})
+    const boardData = await Board.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
     if (!boardData){
       res.status(404).json({message: 'No location found with this id!'})
     }
