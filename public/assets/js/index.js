@@ -1,6 +1,4 @@
-// TODO: Declare global variables
 // Function populating task information goes here.
-
 const createTasks = (data) => {
     const column = document.querySelector('.column');
     let taskWrapper = document.createElement('div');
@@ -13,15 +11,16 @@ const createTasks = (data) => {
     taskWrapper.appendChild(taskWrapper);
     let taskDescription = document.createElement('p');
     taskDescription.setAttribute('class', 'task-description')
-    taskDescription.textContent = data.taskDescription;
+    taskDescription.textContent = data.description;
     taskWrapper.appendChild(taskDescription);
 }
 
 const grabTaskData = () => {
-    fetch("/api/tasks")
+    fetch("/api/tasks").then(data => data.json()).then(dataObj => console.log(dataObj.title))
 }
 
 
+grabTaskData();
 
 
 // TODO: create drag and drop functionality, first on tasks "then cards, time permitting" 
