@@ -78,14 +78,15 @@ BY Day 3 we should have the project page displaying through handlebars(with seed
 
 ### Day 3 - Functionality Completion, Login/Auth
 FRONTEND 
-* Handlebars user page (Anthony)
+* Handlebars home page needs to be almost complete (Anthony)
+* Handlebars user page needs started (Anyone)
 * Project board view finished and drag-n-drop functionality working as expected (Mike)
 * Create forms to create project boards, cards, tasks and task information (Anyone)
 
 BACKEND (Jesse / Mitchell)
-* Heroku settup(Mike, early priority)
-* Create user login's, cookies and properly encrypt information
-* Create the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
+* (1) Debug all current routes and make sure they all work as expected.
+* (2) Create user login's, cookies and properly encrypt information
+* (3) Create/Plan the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
 
 
 ### Day 4/5 - Debugging, ReAssessing
@@ -97,6 +98,7 @@ FRONTEND
 * Look into mobile friendly options to incorporate such as hamburger nav menu's
 
 BACKEND
+* Heroku settup(Mike, early priority)
 * Test and complete all routing 
 * Thouroughly debug 
 * Thouroughly seed project starter template/s
@@ -153,3 +155,46 @@ TIME PERMITTING
 [MVP Goal / reference](https://kanbanflow.com/)
 
 [Simple WireFrame](https://docs.google.com/presentation/d/1TeOepEL9TuoyOichqtosXRYTOqUkCyeTl7oAkW3Yi5U/edit?usp=sharing)
+
+
+
+### JSON SEED SAMPLES 
+
+api/Boards:
+
+    {
+        "id": 0,
+        "boardName": "Name0",
+        "UserID": 0
+    },
+    {
+        "id": 1,
+        "boardName": "Name1",
+        "UserID": 1
+    },
+    {
+        "id": 2,
+        "boardName": "Name2",
+        "UserID": 2
+    }
+
+api/Cards:
+
+    {
+        "id": 0,
+        "title": "Title0",
+        "position": 0,
+        "board_id": 0
+    },
+    {
+        "id": 1,
+        "title": "Title1",
+        "position": 1,
+        "board_id": 1
+    },
+    {
+        "id": 2,
+        "title": "Title2",
+        "position": 2,
+        "board_id": 2
+    }

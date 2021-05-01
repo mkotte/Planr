@@ -42,6 +42,7 @@ Task.init(
     },
     {
         sequelize,
+        timeStamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'task',
