@@ -4,12 +4,14 @@ const { Card, Board } = require('../../models');
 
 // The `/api/cards` endpoint
 
-// TODO: Debug!
+// working! commented out after findAll() added a new include line of code
 router.get('/', async (req, res) => {
 // find all cards
 // be sure to include its associated Board data
   try {
-    const cardData = await Card.findAll({include: {board: {boardName: boardName}}})
+    const cardData = await Card.findAll({
+      include: [{model: Board}]
+    })//({include: {board: {boardName: boardName}}})
     res.status(200).json(cardData)
   } catch (err) {
     res.status(500).json(err)
@@ -63,11 +65,11 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// TODO: DEBUG
+// Working req auto completed to some crazy function
 router.delete('/:id', async (req, res) => {
   // delete on card by its `id` value
   try {
-    const cardData = await Card.destroy( {where: {id: requestAnimationFrame.params.id}} )
+    const cardData = await Card.destroy( {where: {id: req.params.id}} )
     if(!cardData){
       res.status(404).json({ message: 'No location found with this id!'})
     }
