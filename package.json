@@ -2,7 +2,7 @@
   "name": "project2",
   "version": "1.0.0",
   "description": "Project Management Application",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "npm run test",
     "start": "node server.js"
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/mkotte/project2#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bootstrap": "^4.6.0",
     "connect-session-sequelize": "^7.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

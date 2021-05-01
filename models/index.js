@@ -34,24 +34,21 @@ const User = require('./User');
 // declared associations here
 
 // board-card relationship
-Board.hasMany(Card, {
-    foreignKey: 'board_id',
-});
-
 Card.belongsTo(Board, {
     foreignKey: 'board_id',
 });
 
-
-// card-task relationship
-Card.hasMany(Task, {
-    foreignKey: 'card_id',
+Board.hasMany(Card, {
+    foreignKey: 'board_id',
 });
 
+// card-task relationship
 Task.belongsTo(Card, {
     foreignKey: 'card_id',
 });
 
+Card.hasMany(Task, {
+    foreignKey: 'card_id',
+});
 
-// TODO: export module here
 module.exports = { Board, Card, Task, User };

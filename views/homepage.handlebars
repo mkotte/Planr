@@ -3,7 +3,7 @@
     <main> section with project description, two buttons to create account or sign in}
     graphics, advanced stylings and example photos / templates would also be nice-to-haves
 --}}
-<nav class="navbar" role="navigation" aria-label="main navigation">
+{{!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
@@ -70,4 +70,28 @@
 
 <body>
     {{{ body }}}
-</body>
+</body> --}}
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <input type="input" id="Name" value="Name">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

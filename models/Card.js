@@ -24,7 +24,7 @@ Card.init(
         },
         // * Board ID (FK)
         board_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'board',
                 key: 'id',
@@ -33,6 +33,7 @@ Card.init(
     },
     {
         sequelize,
+        timeStamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'card',
