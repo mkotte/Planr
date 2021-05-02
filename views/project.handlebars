@@ -3,21 +3,14 @@
 
 <main class="columns">
     <div class="board-title-wrapper"> 
-        <h2>{{board title}}</h2>
+        {{!-- <h2>{{board title}}</h2> --}}
     </div>
     {{!-- iterate through each card here, based on posistion--}}
-    {{{ #each card }}}
+    {{!-- {{{ #each board.cardID }}} --}}
 
         <div class="column card-wrapper">
-            <div class="title-wrapper">
-                <h2 class="title">{{card title}}</h2>
-            </div>
-
-            <!-- should iterate through task's dependant on position and fk card_id -->
-            <!-- repeating loop for tasks will be here -->
             
-        </div> 
-
-    {{{ /each }}}
+        </div>
+    {{!-- {{{ /each }}} --}}
     
 </main>
