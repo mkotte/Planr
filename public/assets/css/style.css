@@ -58,10 +58,28 @@
 #modalbuttonsign{
     position: absolute;
     
-    left: 400px;
+    left: 600px;
 }
 
 #modalbuttonlog{
     position: absolute;
     left: 500px
 }
+
+.homepagebody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+    }
+    .navbar-toggler.toggler-example {
+    cursor: pointer;
+    }
+
+
