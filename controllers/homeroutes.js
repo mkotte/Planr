@@ -13,10 +13,10 @@ router.get('/projects/:board', async (req,res) => {
     INNER JOIN Board ON Card.Board_id = Board.id 
     WHERE card.board_id = ${req.params.board} 
     ORDER BY position`, {type: QueryTypes.SELECT});
-    console.log(data)
-    res.render('project', data);
+    res.render('project', {data});
 })
 
+<<<<<<< HEAD
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
     try {
@@ -47,4 +47,6 @@ router.get('/', withAuth, async (req, res) => {
     res.render('login');
   });
 
+=======
+>>>>>>> 7dcd917348ced7b08b36ab2b921d5dc4dfe15b85
 module.exports = router;
