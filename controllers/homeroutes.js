@@ -13,13 +13,7 @@ router.get('/projects/:board', async (req,res) => {
     INNER JOIN Board ON Card.Board_id = Board.id 
     WHERE card.board_id = ${req.params.board} 
     ORDER BY position`, {type: QueryTypes.SELECT});
-    
     res.render('project', {data});
 })
-
-
-
-
-
 
 module.exports = router;
