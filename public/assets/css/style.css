@@ -1,133 +1,127 @@
-*{
-    font-family: "Raleway", sans-serif;
-}
-
-
-/* .modal {
-    
-    
-    bottom: 0;
-    right: 0;
-    display: none;
-    overflow: auto;
-    background-color: #000000;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
-    width: 475px;
-   height: 693px;
-   position: absolute;
-   left: 50%;
-   top: 50%; 
-   margin-left: -150px;
-   margin-top: -150px;
-   word-wrap: normal;
-} */
-
-.modal-window {
-    position: relative;
-    background-color: #FFFFFF;
-    width: auto;
-    margin: 10% auto;
-    padding: 20px;
-}
-
-.modal-window.small {
-    width: 75%;
-}
-
-.modal-window.large {
-    width: 75%;
-}
-
-.close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: rgba(0,0,0,0.3);
-    height: 30px;
-    width: 30px;
-    font-size: 30px;
-    line-height: 30px;
-    text-align: center;
-}
-
-.close:hover,
-.close:focus {
-    color: #000000;
-    cursor: pointer;
-}
-
-.open {
-    display: block;
-}
-
-
-        button { padding: 15px; font-size: 12px; background: indianred; color: #FFF; border: none }
-        .subheading { font-style: italic }
-   
-
-
-#modalbuttonsign{
-    position: absolute;
-    
-    left: 600px;
-}
-
-#modalbuttonlog{
-    position: absolute;
-    left: 500px
-}
-
-.homepagebody{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-}
-
-.fa-1x {
-    font-size: 1.5rem;
-    }
-    .navbar-toggler.toggler-example {
-    cursor: pointer;
-    }
-
-    
-
-    /* Text alignment for body */
-    body {
-        text-align: center;
-    }
-      
-    /* Styling h1 tag */
-    h1 {
-        color: green;
-        text-align: center;
-    }
-      
-    /* Styling modal */
-    .modal:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-    }
-      
-    .modal-dialog {
-        display: inline-block;
-        vertical-align: middle;
-    }
-      
-    .modal .modal-content {
-        padding: 20px 20px 20px 20px;
-        -webkit-animation-name: modal-animation;
-        -webkit-animation-duration: 0.5s;
-        animation-name: modal-animation;
-        animation-duration: 0.5s;
-        align-content: center;
-        justify-content: center;
-    }
-
-   
+                            * {
+                                font-family: "Raleway", sans-serif;
+                            }
+                            
+                            .modal-window {
+                                position: relative;
+                                background-color: #FFFFFF;
+                                width: auto;
+                                margin: 10% auto;
+                                padding: 20px;
+                            }
+                            
+                            .modal-window.small {
+                                width: 75%;
+                            }
+                            
+                            .modal-window.large {
+                                width: 75%;
+                            }
+                            
+                            .close {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                color: rgba(0, 0, 0, 0.3);
+                                height: 30px;
+                                width: 30px;
+                                font-size: 30px;
+                                line-height: 30px;
+                                text-align: center;
+                            }
+                            
+                            .close:hover,
+                            .close:focus {
+                                color: #000000;
+                                cursor: pointer;
+                            }
+                            
+                            .open {
+                                display: block;
+                            }
+                            
+                            button {
+                                padding: 15px;
+                                font-size: 12px;
+                                background: indianred;
+                                color: #FFF;
+                                border: none
+                            }
+                            
+                            .subheading {
+                                font-style: italic
+                            }
+                            
+                            #modalbuttonsign {
+                                position: absolute;
+                                left: 600px;
+                            }
+                            
+                            #modalbuttonlog {
+                                position: absolute;
+                                left: 500px
+                            }
+                            
+                            .homepagebody {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                min-height: 100vh;
+                            }
+                            
+                            .fa-1x {
+                                font-size: 1.5rem;
+                            }
+                            
+                            .navbar-toggler.toggler-example {
+                                cursor: pointer;
+                            }
+                            /* Text alignment for body */
+                            
+                            body {
+                                text-align: center;
+                            }
+                            /* Styling h1 tag */
+                            
+                            h1 {
+                                color: green;
+                                text-align: center;
+                            }
+                            /* Styling modal */
+                            
+                            .modal:before {
+                                content: '';
+                                display: inline-block;
+                                height: 100%;
+                                vertical-align: middle;
+                            }
+                            
+                            .modal-dialog {
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            
+                            .modal .modal-content {
+                                padding: 20px 20px 20px 20px;
+                                -webkit-animation-name: modal-animation;
+                                -webkit-animation-duration: 0.5s;
+                                animation-name: modal-animation;
+                                animation-duration: 0.5s;
+                                align-content: center;
+                                justify-content: center;
+                            }
+                            
+                            img {
+                                width: 200;
+                                height: 200px;
+                            }
+                            
+                            body {
+                                background-color: #98D6D1;
+                            }
+                            
+                            .btn .btn-primary {
+                                color: teal
+                            }
