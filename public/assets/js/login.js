@@ -4,5 +4,21 @@ const loginFormHandler = async (event) => {
     const email = document.querySelector('#email-login').nodeValue.trim();
     const password = document.querySelector('#password-login').nodeValue.trim();
 
-    if(email && password)
-}
+    if(email && password) {
+        const response = await fetch('api/users/login', {
+            method: 'POST',
+            body: JSON.stringify({ email, password }),
+            headers: { 'Conent-Type': 'application/json' },
+        });
+
+        if (response.ok) {
+            document.location.replace('/');
+        } else {
+            alert('failed to log in');
+        }
+    }
+};
+
+document    
+    .querySelector('.login-form')
+    .addEventListener('submit', loginFormHandler);
