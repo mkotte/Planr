@@ -1,16 +1,18 @@
 {{!-- this is where we will be able to view selected/individual project board and render all information here --}}
 {{!-- TODO: create routes exporting required information to presernt in handlebars.js --}}
 
-<main class="columns">
+<main class="project-board">
     <div class="board-title-wrapper"> 
         {{!-- <h2>{{board title}}</h2> --}}
     </div>
     {{!-- iterate through each card here, based on posistion--}}
     {{!-- {{{ #each board.cardID }}} --}}
-
-        <div class="column card-wrapper">
-            
-        </div>
-    {{!-- {{{ /each }}} --}}
-    
+    <div class="cardWrappers">
+        
+        {{#each this}}
+            <div class="column-pos-{{position}} card-wrapper" id="column-id-{{id}}">
+                <h2 class="card-title-{{id}}">{{title}}</h2>
+            </div>
+        {{/each}}
+    </div>
 </main>

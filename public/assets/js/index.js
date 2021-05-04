@@ -1,7 +1,7 @@
 // Function populating task information goes here.
 const createTasks = (data) => {
     for (let i=0; i < data.length; i++){ 
-        const column = document.querySelector('.column');
+        const column = document.querySelector(`.column-${i}`);
         let taskWrapper = document.createElement('div');
         taskWrapper.setAttribute('class', 'task-wrapper');
         column.appendChild(taskWrapper);
