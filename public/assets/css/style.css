@@ -1,7 +1,11 @@
-.modal {
-    position: right;
-    top: 0;
-    left: 0;
+*{
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* .modal {
+    
+    
     bottom: 0;
     right: 0;
     display: none;
@@ -9,7 +13,15 @@
     background-color: #000000;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 9999;
-}
+    width: 475px;
+   height: 693px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -150px;
+   margin-top: -150px;
+   word-wrap: normal;
+} */
 
 .modal-window {
     position: relative;
@@ -82,4 +94,40 @@
     cursor: pointer;
     }
 
+    
 
+    /* Text alignment for body */
+    body {
+        text-align: center;
+    }
+      
+    /* Styling h1 tag */
+    h1 {
+        color: green;
+        text-align: center;
+    }
+      
+    /* Styling modal */
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+      
+    .modal-dialog {
+        display: inline-block;
+        vertical-align: middle;
+    }
+      
+    .modal .modal-content {
+        padding: 20px 20px 20px 20px;
+        -webkit-animation-name: modal-animation;
+        -webkit-animation-duration: 0.5s;
+        animation-name: modal-animation;
+        animation-duration: 0.5s;
+        align-content: center;
+        justify-content: center;
+    }
+
+   
