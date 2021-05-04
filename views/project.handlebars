@@ -8,9 +8,11 @@
     {{!-- iterate through each card here, based on posistion--}}
     {{!-- {{{ #each board.cardID }}} --}}
     <div class="cardWrappers">
+        {{log data}}
+        {{#each data}}
         
-        {{#each this}}
-            <div class="column-pos-{{position}} card-wrapper" id="column-id-{{id}}">
+        {{!-- {{#each this as |card|}} --}}
+            <div class="column-{{position}} card-wrapper" id="column-id-{{id}}">
                 <h2 class="card-title-{{id}}">{{title}}</h2>
             </div>
         {{/each}}
