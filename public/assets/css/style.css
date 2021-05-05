@@ -1,14 +1,5 @@
-.modal {
-    position: right;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: none;
-    overflow: auto;
-    background-color: #000000;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
+* {
+    font-family: "Raleway", sans-serif;
 }
 
 .modal-window {
@@ -31,7 +22,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
     height: 30px;
     width: 30px;
     font-size: 30px;
@@ -49,37 +40,95 @@
     display: block;
 }
 
+button {
+    padding: 15px;
+    font-size: 12px;
+    background: indianred;
+    color: #FFF;
+    border: none
+}
 
-        button { padding: 15px; font-size: 12px; background: indianred; color: #FFF; border: none }
-        .subheading { font-style: italic }
-   
+.subheading {
+    font-style: italic
+}
 
-
-#modalbuttonsign{
+#modalbuttonsign {
     position: absolute;
-    
     left: 600px;
 }
 
-#modalbuttonlog{
+#modalbuttonlog {
     position: absolute;
     left: 500px
 }
 
-.homepagebody{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
+.homepagebody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .fa-1x {
     font-size: 1.5rem;
-    }
-    .navbar-toggler.toggler-example {
+}
+
+.navbar-toggler.toggler-example {
     cursor: pointer;
-    }
+}
 
 
+/* Text alignment for body */
+
+body {
+    text-align: center;
+}
+
+
+/* Styling h1 tag */
+
+h1 {
+    color: #004A42;
+    text-align: center;
+}
+
+
+/* Styling modal */
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.modal-dialog {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modal .modal-content {
+    padding: 20px 20px 20px 20px;
+    -webkit-animation-name: modal-animation;
+    -webkit-animation-duration: 0.5s;
+    animation-name: modal-animation;
+    animation-duration: 0.5s;
+    align-content: center;
+    justify-content: center;
+}
+
+img {
+    width: 750px;
+    height: 500px;
+}
+
+body {
+    background-color: #98D6D1;
+}
+
+#login,
+#signup {
+    background-color: teal;
+}
