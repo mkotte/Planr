@@ -35,18 +35,18 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [10],
-            },
+            // validate: {
+            //     len: [/*need to decide a length for passwords*/],
+            // },
         },
     },
     {
-        hooks: {
-            beforeCreate: async (newUser) => {
-                newUser.password = await bcrypt.hash(newUser.password, 10);
-                return newUser;
-            },
-        },
+        // hooks: {
+        //     beforeCreate: async (newUser) => {
+        //         newUser.password = await bcrypt.hash(newUser.password, 10);
+        //         return newUser;
+        //     },
+        // },
         sequelize,
         timestamps: false,
         freezeTableName: true,
