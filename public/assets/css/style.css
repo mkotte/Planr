@@ -120,10 +120,15 @@ h1 {
 }
 
 img {
-    width: 200;
-    height: 200px;
+    width: 750px;
+    height: 500px;
 }
 
 body {
     background-color: #98D6D1;
+}
+
+#login,
+#signup {
+    background-color: teal;
 }
