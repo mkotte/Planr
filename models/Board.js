@@ -14,10 +14,6 @@ Board.init(
         boardName: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        UserID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
         }
         // * User ID's (need to think of how to give user's access to specific project boards)
     },
