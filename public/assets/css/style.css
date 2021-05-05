@@ -132,3 +132,21 @@ body {
 #signup {
     background-color: teal;
 }
+
+/* Project Page Styling Under Here  */
+
+.col{
+    max-width: 20%;
+    text-align: left;
+}
+
+
+/*  Project page media queries
+    current plan is to implement a horizontal scroll 
+    for smaller screens / mobile devices while not sacrificing sizes
+    May want to add an image / animation to let users know it is draggable 
+    for touch devices
+*/
+@media screen and (max-width: 1440px){
+
+}

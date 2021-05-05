@@ -1,11 +1,16 @@
 // Function populating task information goes here.
+// const column1 = document.querySelector(`.column-1`);
+// const column2 = document.querySelector(`.column-2`);
+// const column3 = document.querySelector(`.column-3`);
+// const column4 = document.querySelector(`.column-4`);
+// const column5 = document.querySelector(`.column-5`);
+
 const createTasks = (data) => {
-    for (let i=1; i < data.length; i++){ 
-        const column = document.querySelector(`.column-${i}`);
-        console.log(column)
+    for (let i = 0; i < data.length; i++){ 
+        
         let taskWrapper = document.createElement('div');
         taskWrapper.setAttribute('class', 'task-wrapper');
-        column.appendChild(taskWrapper);
+        document.querySelector(`.task-list-${data[i].card_id}`).appendChild(taskWrapper)
 
         let taskTitle = document.createElement('h3')
         taskTitle.setAttribute('class', 'task-title')
@@ -14,7 +19,8 @@ const createTasks = (data) => {
         let taskDescription = document.createElement('p');
         taskDescription.setAttribute('class', 'task-description')
         taskDescription.textContent = data[i].description;
-        taskWrapper.appendChild(taskDescription);
+        taskWrapper.appendChild(taskDescription); 
+    
     }
 }
 

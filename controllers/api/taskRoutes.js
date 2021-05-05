@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Task, Card } = require('../../models');
 
-// The `/api/cards` endpoint
+// The `/api/tasks` endpoint
 
 // Working
 router.get('/', async (req, res) => {
