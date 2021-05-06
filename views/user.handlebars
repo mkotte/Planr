@@ -13,13 +13,12 @@
         {{#each projectAvailable}}
         <div class="project-{{projectAvailable.id}}">
             {{!-- folder or project icon goes here --}}
-            <div class="projectName">{{projectAvailable.name}}</div>
-            <div class="projectDescription">{{projectAvailable.description}}</div>
+            <div class="projectName">{{projectAvailable.boardName}}</div>
+            <div class="projectDescription">{{projectAvailable.boardDescription}}</div>
         </div>
-        {{/else}}
+        {{/each}}
         <div>
             {{!-- clickable div with pop-up form where we can allow users to create new projects --}}
         </div>
-        {{/each}}
     </div>
 </main>
