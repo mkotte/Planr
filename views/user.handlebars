@@ -1,0 +1,25 @@
+{{!-- this isthe page where users are placed after login, 
+    with the ability to view active projects, and create new projects--}}
+
+{{!-- navbar goes here --}}
+
+<main>
+    <div>
+        <h2>
+            {{!-- username goes here --}}
+        </h2>
+    </div>
+    <div>
+        {{#each projectAvailable}}
+        <div class="project-{{projectAvailable.id}}">
+            <div class="">
+
+            </div>
+        </div>
+        {{/else}}
+        <div>
+            {{!-- clickable div with pop-up form where we can allow users to create new projects --}}
+        </div>
+        {{/each}}
+    </div>
+</main>

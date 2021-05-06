@@ -49,10 +49,11 @@ FINISHED BY END OF DAY
 * Login / Authentication
 * Project + Users page appending / sourcing correct information
 * Form's for new project's + tasks are working and completed
+* Seeds are professional and thorough for presentation
 * Homepage finalized + finished
-* Drag-n-drop functionality
+* Drag-n-drop functionality (started, needs linked and to save updated positions onEnd())
 * Updating per users
-* Deployed to Heroku
+* Deployed to Heroku (Done)
 
 FINISHED BY DAY 6
 * CSS/Styling

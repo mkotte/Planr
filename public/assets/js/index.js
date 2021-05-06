@@ -1,10 +1,4 @@
-// Function populating task information goes here.
-// const column1 = document.querySelector(`.column-1`);
-// const column2 = document.querySelector(`.column-2`);
-// const column3 = document.querySelector(`.column-3`);
-// const column4 = document.querySelector(`.column-4`);
-// const column5 = document.querySelector(`.column-5`);
-
+// Creating tasks and assigning them to the proper cards/columns
 const createTasks = (data) => {
     for (let i = 0; i < data.length; i++){ 
         
@@ -28,13 +22,10 @@ const grabTaskData = () => {
     fetch("/api/tasks").then(data => data.json()).then(dataObj => createTasks(dataObj))
 }
 
-
-grabTaskData();
-
-
 // TODO: create drag and drop functionality, first on tasks "then cards, time permitting" 
+
 
 // TODO: add event listeners (bottom) for button presses (i.e. login, project boards etc)
 
-// fetch api routes for handlebars here
-// object card including title and post
+
+grabTaskData();

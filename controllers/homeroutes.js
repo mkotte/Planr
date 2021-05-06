@@ -42,7 +42,7 @@ router.get('/', withAuth, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
   
 //   router.get('/login', (req, res) => {
 //     // If a session exists, redirect the request to the homepage
