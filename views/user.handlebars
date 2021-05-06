@@ -9,12 +9,12 @@
             {{!-- username goes here --}}
         </h2>
     </div>
-    <div>
+    <div class="project wrapper">
         {{#each projectAvailable}}
         <div class="project-{{projectAvailable.id}}">
-            <div class="">
-
-            </div>
+            {{!-- folder or project icon goes here --}}
+            <div class="projectName">{{projectAvailable.name}}</div>
+            <div class="projectDescription">{{projectAvailable.description}}</div>
         </div>
         {{/else}}
         <div>
