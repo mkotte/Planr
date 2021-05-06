@@ -8,13 +8,19 @@ const withAuth = require('../utils/auth');
 
 // GET for project page
 router.get('/projects/:board', async (req,res) => {
+    const data2 = await Card.findAll()
+    console.log(data2)
+    
     const data = await sequelize
     .query(`SELECT Card.id, Card.title, Card.position, Card.board_id  FROM Card 
     INNER JOIN Board ON Card.Board_id = Board.id 
     WHERE card.board_id = ${req.params.board} 
     ORDER BY position`, {type: QueryTypes.SELECT});
+    console.log(data)
     res.render('project', {data});
 })
+
+
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
