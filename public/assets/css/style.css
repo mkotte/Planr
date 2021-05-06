@@ -1,141 +1,162 @@
-            * {
-                font-family: "Raleway", sans-serif;
-            }
-            
-            .modal-window {
-                position: relative;
-                background-color: #FFFFFF;
-                width: auto;
-                margin: 10% auto;
-                padding: 20px;
-            }
-            
-            .modal-window.small {
-                width: 75%;
-            }
-            
-            .modal-window.large {
-                width: 75%;
-            }
-            
-            .close {
-                position: absolute;
-                top: 0;
-                right: 0;
-                color: rgba(0, 0, 0, 0.3);
-                height: 30px;
-                width: 30px;
-                font-size: 30px;
-                line-height: 30px;
-                text-align: center;
-            }
-            
-            .close:hover,
-            .close:focus {
-                color: #000000;
-                cursor: pointer;
-            }
-            
-            .open {
-                display: block;
-            }
-            
-            button {
-                padding: 15px;
-                font-size: 12px;
-                background: indianred;
-                color: #FFF;
-                border: none
-            }
-            
-            .subheading {
-                font-style: italic
-            }
-            
-            #modalbuttonsign {
-                position: absolute;
-                left: 600px;
-            }
-            
-            #modalbuttonlog {
-                position: absolute;
-                left: 500px
-            }
-            
-            .homepagebody {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                min-height: 100vh;
-            }
-            
-            .fa-1x {
-                font-size: 1.5rem;
-            }
-            
-            .navbar-toggler.toggler-example {
-                cursor: pointer;
-            }
-            /* Text alignment for body */
-            
-            body {
-                text-align: center;
-            }
-            /* Styling h1 tag */
-            
-            h1 {
-                color: #004A42;
-                text-align: center;
-            }
-            /* Styling modal */
-            
-            .modal:before {
-                content: '';
-                display: inline-block;
-                height: 100%;
-                vertical-align: middle;
-            }
-            
-            .modal-dialog {
-                display: inline-block;
-                vertical-align: middle;
-            }
-            
-            .modal .modal-content {
-                padding: 20px 20px 20px 20px;
-                -webkit-animation-name: modal-animation;
-                -webkit-animation-duration: 0.5s;
-                animation-name: modal-animation;
-                animation-duration: 0.5s;
-                align-content: center;
-                justify-content: center;
-            }
-            
-            img {
-                width: 750px;
-                height: 500px;
-            }
-            
-            body {
-                background-color: #98D6D1;
-            }
-            
-            #login,
-            #signup {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                width: 400px;
-                height: 120px;
-                margin: 20px;
-                border: 10px solid var(--base-color);
-                font-size: 4rem;
-                cursor: pointer;
-            }
-            
-            #login {
-                padding: 50px
-            }
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+.modal-window {
+  position: relative;
+  background-color: #FFFFFF;
+  width: auto;
+  margin: 10% auto;
+  padding: 20px;
+}
+
+.modal-window.small {
+  width: 75%;
+}
+
+.modal-window.large {
+  width: 75%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.3);
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #000000;
+  cursor: pointer;
+}
+
+.open {
+  display: block;
+}
+
+button {
+  padding: 15px;
+  font-size: 12px;
+  background: indianred;
+  color: #FFF;
+  border: none
+}
+
+.subheading {
+  font-style: italic
+}
+
+#modalbuttonsign {
+  position: absolute;
+  left: 600px;
+}
+
+#modalbuttonlog {
+  position: absolute;
+  left: 500px
+}
+
+.homepagebody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.fa-1x {
+  font-size: 1.5rem;
+}
+
+.navbar-toggler.toggler-example {
+  cursor: pointer;
+}
+
+
+/* Text alignment for body */
+
+body {
+  text-align: center;
+}
+
+
+/* Styling h1 tag */
+
+h1 {
+  color: #004A42;
+  text-align: center;
+}
+
+
+/* Styling modal */
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.modal-dialog {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal .modal-content {
+  padding: 20px 20px 20px 20px;
+  -webkit-animation-name: modal-animation;
+  -webkit-animation-duration: 0.5s;
+  animation-name: modal-animation;
+  animation-duration: 0.5s;
+  align-content: center;
+  justify-content: center;
+}
+
+img {
+  width: 750px;
+  height: 500px;
+}
+
+body {
+  background-color: #98D6D1;
+}
+
+#login,
+#signup {
+  font-family: "Raleway";
+  background-color: darkslategrey;
+  font-color: white;
+  font-size: 2em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: relative;
+  min-width: 250px;
+}
+
+
+/* Project Page Styling Under Here  */
+
+.col {
+  max-width: 20%;
+  text-align: left;
+}
+
+
+/*  Project page media queries
+    current plan is to implement a horizontal scroll 
+    for smaller screens / mobile devices while not sacrificing sizes
+    May want to add an image / animation to let users know it is draggable 
+    for touch devices
+*/
+
+@media screen and (max-width: 1440px) {}

@@ -33,124 +33,33 @@
 * HandleBars Frame
 * Project Scope
 
+### Assignments:
 
-If group is on board, task's need to be discussed and assigned based on priority.
+Anthony - frontend, html + design focus
 
----
-Day - 1 
-(Jesse - backend routing focus / willing to bounce around)
-(Mitch - backend / db focus)
-(Mike - flex)
-(Anthony - frontend, html + handlebars focus)
+Jesse - backend routing / html focus
 
-## Tasks 
-### Day 1 - Early Priorities
-<!-- * Wire Framing, keeping mobile friendly in mind *(Mike - before class) -->
-* HTML frame of project board, simple styling (Anthony)
-* HTML frame of the home board (Anthony)
-* Early stages of styling / theme selection w/ responsiveness in mind (bulma *css) (Anthony/Mike)
-* Appending + Fetching relevant data to create the project boards using assets/index.js (Mike)
-<!-- * Model mapping (Users, Projects, Cards, Posts, Comments) *(Mitch) -->
-<!-- * API Routing (Jesse) -->
-<!-- * Create server.js *(Mitch) -->
+Mitch - backend / db focus
 
-### Day 2 - Functionality Assesments
-First take time to regroup, assess where we are currently and what everyone is working on. 
-Then discuss what we want to accomplish by class or before day 3. 
-Finally remind everyone to pull down, then break off and start working.
-
-FRONTEND (Anthony / Mike)
-* HTML BUTTON's (LOG IN / SIGN UP) and respective forms finished by end of class. (Anthony)
-* HTML (handlebars) page for homepage/main near completetion (Anthony)
-* HTML (handlebars) page for the rendered project boards presenting sample data (Mike)
-* assets/script.js or assets/drag-n-drop.js file updating route positions OnEND() and near working by end of class (Mike) 
-* Implement early Drag and Drop functionality (Mike)
-* Add routes for handlebars routing to pages (Mike)
-
-BACKEND (Jesse / Mitchell)
-* Fixing controllers/api/index.js (Jesse, first priority)
-* Create simple seed files, for functionality assessment (Mitchell + Jesse)
-* Debugging / testing routes (Mitchell + Jesse)
-* If finished early, move on to day 3 work 
-
-BY Day 3 we should have the project page displaying through handlebars(with seeded information), application deployed onto heroku, all completed routes tested + debugged and a semi-finished homepage displaying early log-in and sign-up information.
+Mike - flex
 
 
-### Day 3 - Functionality Completion, Login/Auth
-FRONTEND 
-* Handlebars home page needs to be almost complete (Anthony)
-* Handlebars user page needs started (Anyone)
-* Project board view finished and drag-n-drop functionality working as expected (Mike)
-* Create forms to create project boards, cards, tasks and task information (Anyone)
+### Day 5 - Final Working Day
+FINISHED BY END OF DAY
+* Login / Authentication
+* Project + Users page appending / sourcing correct information
+* Form's for new project's + tasks are working and completed
+* Homepage finalized + finished
+* Drag-n-drop functionality
+* Updating per users
+* Deployed to Heroku
 
-BACKEND (Jesse / Mitchell)
-* (1) Debug all current routes and make sure they all work as expected.
-* (2) Create user login's, cookies and properly encrypt information
-* (3) Create/Plan the functionality of sharing cards with other users (i.e. pushing updated boards to all users involved)
-
-
-### Day 4/5 - Debugging, ReAssessing
-Access where we are, what we have left to complete and what extra functionalities we would like to include
-
-FRONTEND
-* Finish styling for completed work
-* Finish all responsiveness / neccesary media queries
-* Look into mobile friendly options to incorporate such as hamburger nav menu's
-
-BACKEND
-* Heroku settup(Mike, early priority)
-* Test and complete all routing 
-* Thouroughly debug 
-* Thouroughly seed project starter template/s
-
-TIME PERMITTING
-* Add google oauth
-* Create Light/Dark switch
-* Look at setting up notifications, or a tutorial on how to use.
-
-### Day 6 - Presentation 
-
----
-
-### DB models
-* Table/Model's: User's, Boards(Project Boards), Cards (ToDo, InProgress, etc), Task's(post's)
-
-#### User's Columns/Elements
-* ID(PK)
-* Email
-* Password (Encrypted using bcrypt)
-* Username (Email or pick your own, tbd)
-
-#### Board's Columns/Elements
-* ID (PK)
-* Name
-* User ID's (need to think of how to give user's access to specific project boards)
-
-#### Card's Columns/Elements
-* ID (PK) 
-* Title
-* Position
-* Board ID (FK)
-
-#### Task's(Posts) Columns/Elements
-* ID (PK)
-* Title
-* Comments/Descriptions
-* Position
-* Card ID (FK)
+FINISHED BY DAY 6
+* CSS/Styling
+* Presentation Slide
+* Professional README + Comments
 
 
-
-
-
-
-
-## Resources
-[Bulma Install](https://bulma.io/documentation/customize/with-webpack/)
-
-[Bulma Doc's](https://bulma.io/documentation/)
-
-[Drag and Drop tutorial](https://www.youtube.com/watch?v=OHTudicK7nY)
 
 [MVP Goal / reference](https://kanbanflow.com/)
 
@@ -158,43 +67,3 @@ TIME PERMITTING
 
 
 
-### JSON SEED SAMPLES 
-
-api/Boards:
-
-    {
-        "id": 0,
-        "boardName": "Name0",
-        "UserID": 0
-    },
-    {
-        "id": 1,
-        "boardName": "Name1",
-        "UserID": 1
-    },
-    {
-        "id": 2,
-        "boardName": "Name2",
-        "UserID": 2
-    }
-
-api/Cards:
-
-    {
-        "id": 0,
-        "title": "Title0",
-        "position": 0,
-        "board_id": 0
-    },
-    {
-        "id": 1,
-        "title": "Title1",
-        "position": 1,
-        "board_id": 1
-    },
-    {
-        "id": 2,
-        "title": "Title2",
-        "position": 2,
-        "board_id": 2
-    }
