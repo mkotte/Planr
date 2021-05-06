@@ -8,16 +8,18 @@ const withAuth = require('../utils/auth');
 
 // GET for project page
 router.get('/projects/:board', async (req,res) => {
-    const data2 = await Card.findAll()
-    console.log(data2)
-    
+    // const data2 = await Card.findAll()
+    // console.log(data2)
+
     const data = await sequelize
-    .query(`SELECT Card.id, Card.title, Card.position, Card.board_id  FROM Card 
-    INNER JOIN Board ON Card.Board_id = Board.id 
+    .query(`SELECT Card.id, Card.title, Card.position, Card.board_id FROM Card 
     WHERE card.board_id = ${req.params.board} 
     ORDER BY position`, {type: QueryTypes.SELECT});
     console.log(data)
-    res.render('project', {data});
+
+    const boardNameData = await Board.findByPk(req.params.board, {raw: true});
+    console.log(boardNameData);
+    res.render('project', {data, boardNameData});
 })
 
 
@@ -40,7 +42,7 @@ router.get('/', withAuth, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
   
 //   router.get('/login', (req, res) => {
 //     // If a session exists, redirect the request to the homepage
