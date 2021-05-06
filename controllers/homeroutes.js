@@ -22,7 +22,18 @@ router.get('/projects/:board', async (req,res) => {
     res.render('project', {data, boardNameData});
 })
 
+router.get('/user/:id', async (req,res) => {
 
+    const projectsAvailable = await Board.findByPk(req.params.id, {raw: true})
+    console.log(projectsAvailable)
+    // if (!req.session.logged_in) {
+    //     res.redirect('/');
+    //     return;
+    // }
+
+    res.render('user', projectsAvailable)
+
+})
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
