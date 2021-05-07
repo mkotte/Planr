@@ -6,16 +6,18 @@
 <main>
     <div>
         <h2>
-            {{!-- username goes here --}}
+            {{userData.username}}
         </h2>
     </div>
     <div class="project wrapper">
-        {{#each data}}
+        {{#each boardData}}
         
-        <div class="project-{{data.boards.id}}">
+        <div class="project-{{id}}">
             {{!-- folder or project icon goes here --}}
-            <div class="projectName">{{data.boards.boardName}}</div>
-            <div class="projectDescription">{{data.boards.boardDescription}}</div>
+            <div class="projectName">
+                <a  href="/project/{{id}}">{{boardName}}</a>
+            </div>
+            <div class="projectDescription">{{boardDescription}}</div>
         </div>
         {{/each}}
         <div>

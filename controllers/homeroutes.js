@@ -7,7 +7,7 @@ const { Card, Board, Task, User, UsersXBoards } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET for project page
-router.get('/projects/:board', async (req,res) => {
+router.get('/project/:board', async (req,res) => {
     // const data2 = await Card.findAll()
     // console.log(data2)
 
@@ -23,14 +23,13 @@ router.get('/projects/:board', async (req,res) => {
 })
 
 router.get('/user/:id', async (req,res) => {
-    
     const boardData = await Board.findAll({ where: {userId: req.params.id}, raw: true})
     console.log(boardData)
     const userData = await User.findByPk(req.params.id, {raw: true})
     console.log(userData);
 
 
-    res.render('user', {userArray})
+    res.render('user', {boardData, userData})
 
 });
 
