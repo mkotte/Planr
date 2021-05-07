@@ -46,13 +46,13 @@ Mike - flex
 
 ### Day 5 - Final Working Day
 FINISHED BY END OF DAY
-* Login / Authentication
-* Project + Users page appending / sourcing correct information
-* Form's for new project's + tasks are working and completed
-* Seeds are professional and thorough for presentation
-* Homepage finalized + finished
-* Drag-n-drop functionality (started, needs linked and to save updated positions onEnd())
-* Updating per users
+* Login / Authentication (DONE!)
+* Project + Users page appending / sourcing correct information (WIP)
+* Form's for new project's + tasks are working and completed (TODO:)
+* Seeds are professional and thorough for presentation (TODO:)
+* Homepage finalized + finished (DONE)
+* Drag-n-drop functionality (started, needs linked and to save updated positions onEnd()) (WIP)
+* Updating per users (TODO: maybe)
 * Deployed to Heroku (Done)
 
 FINISHED BY DAY 6
