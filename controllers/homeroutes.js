@@ -24,23 +24,15 @@ router.get('/projects/:board', async (req,res) => {
 
 router.get('/user/:id', async (req,res) => {
     
-    const userArray = await User.findByPk(req.params.id, {raw: true,
-    include: Board})
-    console.log(userArray)
+    const boardData = await Board.findAll({ where: {userId: req.params.id}, raw: true})
+    console.log(boardData)
+    const userData = await User.findByPk(req.params.id, {raw: true})
+    console.log(userData);
 
-    // const 
-    // find the user then through user find the board (findOne)
-    // const projectsAvailable = await Board.findByPk( {where: {id: req.params}}, {raw: true})
-    
 
-    // if (!req.session.logged_in) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    res.render('user', {userArray})
 
-    res.render('user', [])
-
-})
+});
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
@@ -61,7 +53,8 @@ router.get('/', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
 });
-  
+
+
 //   router.get('/login', (req, res) => {
 //     // If a session exists, redirect the request to the homepage
 //     if (req.session.logged_in) {

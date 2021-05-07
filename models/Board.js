@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, INTEGER } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Board extends Model {}
@@ -18,8 +18,16 @@ Board.init(
         boardDescription:{
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
         // * User ID's (need to think of how to give user's access to specific project boards)
+        user_id:{
+            type:INTEGER,
+            allowNull:false,
+            references:{
+                model: 'user',
+                key: 'id',
+            }
+        }, 
     },
     {
         sequelize,

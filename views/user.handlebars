@@ -10,11 +10,12 @@
         </h2>
     </div>
     <div class="project wrapper">
-        {{#each projectAvailable}}
-        <div class="project-{{projectAvailable.id}}">
+        {{#each data}}
+        
+        <div class="project-{{data.boards.id}}">
             {{!-- folder or project icon goes here --}}
-            <div class="projectName">{{projectAvailable.boardName}}</div>
-            <div class="projectDescription">{{projectAvailable.boardDescription}}</div>
+            <div class="projectName">{{data.boards.boardName}}</div>
+            <div class="projectDescription">{{data.boards.boardDescription}}</div>
         </div>
         {{/each}}
         <div>

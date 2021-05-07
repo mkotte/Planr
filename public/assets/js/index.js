@@ -28,4 +28,4 @@ const grabTaskData = () => {
 // TODO: add event listeners (bottom) for button presses (i.e. login, project boards etc)
 
 
-grabTaskData();
+// grabTaskData();
