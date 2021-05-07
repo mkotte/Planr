@@ -120,7 +120,7 @@ h1 {
 }
 
 img {
-  width: 100%;
+  width: 50%;
   height: 500px;
 }
 
@@ -144,6 +144,13 @@ body {
 }
 
 @media only screen and (max-width:320px) {
+  #login,
+  #signup {
+    min-width: 150px
+  }
+}
+
+@media only screen and (max-width:375px) {
   #login,
   #signup {
     min-width: 150px
