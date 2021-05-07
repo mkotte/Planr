@@ -120,8 +120,8 @@ h1 {
 }
 
 img {
-  width: 50%;
-  height: 500px;
+  width: 100%;
+  max-width: 400px;
 }
 
 body {
