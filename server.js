@@ -23,7 +23,7 @@ const sess = {
       db: sequelize
     })
 };
-  
+
 app.use(session(sess));
 
 // Informing Express.js on which template engine to use

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { QueryTypes } = require('sequelize');
 const sequelize = require('../config/connection')
-const { Card, Board, Task, User } = require('../models');
+const { Card, Board, Task, User, UsersXBoards } = require('../models');
 
 // Required middleware for autorization
 const withAuth = require('../utils/auth');
@@ -23,15 +23,22 @@ router.get('/projects/:board', async (req,res) => {
 })
 
 router.get('/user/:id', async (req,res) => {
+    
+    const userArray = await User.findByPk(req.params.id, {raw: true,
+    include: Board})
+    console.log(userArray)
 
-    const projectsAvailable = await Board.findByPk(req.params.id, {raw: true})
-    console.log(projectsAvailable)
+    // const 
+    // find the user then through user find the board (findOne)
+    // const projectsAvailable = await Board.findByPk( {where: {id: req.params}}, {raw: true})
+    
+
     // if (!req.session.logged_in) {
     //     res.redirect('/');
     //     return;
     // }
 
-    res.render('user', projectsAvailable)
+    res.render('user', [])
 
 })
 
@@ -66,3 +73,4 @@ router.get('/', withAuth, async (req, res) => {
 //   });
 
 module.exports = router;
+

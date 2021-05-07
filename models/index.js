@@ -30,7 +30,7 @@ const Board = require('./Board');
 const Card = require('./Card');
 const Task = require('./Task');
 const User = require('./User');
-
+const UsersXBoards = require('./UsersXBoards')
 // declared associations here
 
 // board-card relationship
@@ -51,4 +51,8 @@ Card.hasMany(Task, {
     foreignKey: 'card_id',
 });
 
-module.exports = { Board, Card, Task, User };
+User.belongsToMany(Board, {through: UsersXBoards});
+Board.belongsToMany(User, {through: UsersXBoards});
+
+
+module.exports = { Board, Card, Task, User, UsersXBoards };
