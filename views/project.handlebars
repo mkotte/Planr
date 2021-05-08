@@ -9,10 +9,11 @@
     {{!-- {{{ #each board.cardID }}} --}}
     
     <div class="cardsWrapper row align-items-start justify-content-start" id="cardWrapper">
+        {{log data}}
         {{#each data}}
             <div class="card-body col" id="column-id-{{id}}">
                 <h2 class="card-title-{{id}} card-title">{{title}}</h2>
-                <div class="task-list-{{position}}"></div>
+                <div class="task-list-{{position}}" id="id-{{position}}"></div>
             </div>
         {{/each}}
     </div>

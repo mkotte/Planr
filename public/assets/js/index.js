@@ -9,6 +9,7 @@ const createTasks = (data) => {
         
         let taskWrapper = document.createElement('div');
         taskWrapper.setAttribute('class', 'task-wrapper');
+        taskWrapper.setAttribute('id', `${data[i].id}`)
         document.querySelector(`.task-list-${data[i].card_id}`).appendChild(taskWrapper)
 
         // const taskList1 = document.querySelector('.task-list-1') 
@@ -49,8 +50,29 @@ const makeSortable = () => {
             evt.oldDraggableIndex; // element's old index within old parent, only counting draggable elements
             evt.newDraggableIndex; // element's new index within new parent, only counting draggable elements
             evt.clone // the clone element
-            evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
-            console.log(evt.newIndex)
+            
+            const cardId = evt.to.id
+
+            const handlePositionSave = () => {
+                const newPosition = {
+                    id: itemEl.id,
+                    card_id:cardId.substring(3),
+                };
+                console.log(newPosition)
+                savePosition(newPosition)
+            };
+
+            const savePosition = (el) => {
+                fetch(`/api/tasks/${itemEl.id}`, {
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(el),
+                })
+            }
+
+            handlePositionSave();
         }
     });
 
@@ -68,6 +90,31 @@ const makeSortable = () => {
             evt.clone // the clone element
             evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
             console.log(evt.newIndex)
+            console.log(evt.from)
+            console.log(evt.to)
+
+            const cardId = evt.to.id
+
+            const handlePositionSave = () => {
+                const newPosition = {
+                    id: itemEl.id,
+                    card_id:cardId.substring(3),
+                };
+                console.log(newPosition)
+                savePosition(newPosition)
+            };
+
+            const savePosition = (el) => {
+                fetch(`/api/tasks/${itemEl.id}`, {
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(el),
+                })
+            }
+
+            handlePositionSave();
         }
     });
 
@@ -85,6 +132,31 @@ const makeSortable = () => {
             evt.clone // the clone element
             evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
             console.log(evt.newIndex)
+            console.log(evt.from)
+            console.log(evt.to)
+
+            const cardId = evt.to.id
+
+            const handlePositionSave = () => {
+                const newPosition = {
+                    id: itemEl.id,
+                    card_id:cardId.substring(3),
+                };
+                console.log(newPosition)
+                savePosition(newPosition)
+            };
+
+            const savePosition = (el) => {
+                fetch(`/api/tasks/${itemEl.id}`, {
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(el),
+                })
+            }
+
+            handlePositionSave();
         }
     });
 
@@ -102,6 +174,31 @@ const makeSortable = () => {
             evt.clone // the clone element
             evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
             console.log(evt.newIndex)
+            console.log(evt.from)
+            console.log(evt.to)
+
+            const cardId = evt.to.id
+
+            const handlePositionSave = () => {
+                const newPosition = {
+                    id: itemEl.id,
+                    card_id:cardId.substring(3),
+                };
+                console.log(newPosition)
+                savePosition(newPosition)
+            };
+
+            const savePosition = (el) => {
+                fetch(`/api/tasks/${itemEl.id}`, {
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(el),
+                })
+            }
+
+            handlePositionSave();
         }
     });
 
@@ -109,7 +206,7 @@ const makeSortable = () => {
         group: 'shared',
         animation: 150,
         onEnd: function (/**Event*/evt) {
-            var itemEl = evt.item;  // dragged HTMLElement
+            let itemEl = evt.item;  // dragged HTMLElement
             evt.to;    // target list
             evt.from;  // previous list
             evt.oldIndex;  // element's old index within old parent
@@ -119,10 +216,39 @@ const makeSortable = () => {
             evt.clone // the clone element
             evt.pullMode;  // when item is in another sortable: `"clone"` if cloning, `true` if moving
             console.log(evt.newIndex)
+            console.log(evt.from)
+            console.log(evt.to)
+
+            const cardId = evt.to.id
+
+            const handlePositionSave = () => {
+                const newPosition = {
+                    id: itemEl.id,
+                    card_id:cardId.substring(3),
+                };
+                savePosition(newPosition)
+            };
+
+            const savePosition = (el) => {
+                fetch(`/api/tasks/${itemEl.id}`, {
+                    method: 'PUT',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(el),
+                })
+            }
+
+            handlePositionSave();
         }
     });
 
 }
+ 
+//function to save new position of dragged element
+
+
+
 
 // TODO: add event listeners (bottom) for button presses (i.e. login, project boards etc)
 
