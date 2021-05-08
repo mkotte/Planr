@@ -4,7 +4,7 @@ const init = () => {
 }
 
 const refreshTasks = () => {
-    
+
 }
 
 // Creating tasks and assigning them to the proper cards/columns
@@ -262,7 +262,7 @@ const handleNewTask = (el) => {
         card_id: el,
     };
     createNewTask(newTask);
-    init();
+    location.reload();
 }   
 
 const createNewTask = (el) => {

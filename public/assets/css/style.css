@@ -158,6 +158,10 @@ body {
   text-align: left;
 }
 
+.dropdown-toggle::after {
+  display:none;
+}
+
 
 /*  Project page media queries
     current plan is to implement a horizontal scroll 
