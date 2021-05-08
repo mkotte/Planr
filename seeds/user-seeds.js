@@ -10,15 +10,15 @@ const userData = [
     },
     {
         id: 2,
-        username: "schimmoeller",
-        email: "mschimmoeller@email.com",
-        password: "mspassword@",
-    },
-    {
-        id: 3,
         username: "mkotte",
         email: "mkotte@email.email",
         password: "mkpassword#",
+    },
+    {
+        id: 3,
+        username: "schimmoeller",
+        email: "mschimmoeller@email.com",
+        password: "mspassword@"
     },
     {
         id: 4,

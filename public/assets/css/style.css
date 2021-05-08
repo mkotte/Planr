@@ -162,6 +162,17 @@ body {
   display:none;
 }
 
+.task-wrapper{
+  border:1px black solid;
+  border-radius: 8px;
+  margin: 2px 0;
+  padding: 5px 0 0 5px;
+  background-color: lightgrey;
+}
+
+.new-task{
+  float:right;
+}
 
 /*  Project page media queries
     current plan is to implement a horizontal scroll 

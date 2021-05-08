@@ -23,18 +23,21 @@ router.get('/', async (req, res) => {
   });
 
 router.post('/login', async (req, res) => {
+    console.log('route hit');
     try {
-        const user = await User.findOne({ where: { email: req.body.email } });
-
+      console.log(req.body)
+      console.log(req.body.email)
+        const user = await User.findOne({ where:{ email: req.body.email } });
+        console.log(user)
         
         if (!user) {
             res
                 .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
+                .json({ message: 'Incorrect username or password, please try again' });
             return;
         }
 
-        const validPassword = user.checkPassword(req.body.password);
+        const validPassword = await user.checkPassword(req.body.password);
         console.log(req.body.password)
         console.log(validPassword);
         if (!validPassword) {
@@ -45,13 +48,14 @@ router.post('/login', async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = user.isSoftDeleted;
+            req.session.id = user.id;
             req.session.logged_in = true;
 
             res.json({ user: user, message: 'You are now logged in!' });
         });
 
-        }catch (err) {
+        } catch (err) {
+            console.log(err)
             res.status(400).json(err);
         }
 });

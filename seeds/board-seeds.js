@@ -3,8 +3,8 @@ const { Board } = require('../models')
 const boardData = [
     {
         id: 1,
-        boardName: "Refactoring Practice",
-        boardDescription: "Homework 1 from the OSU full-stack coding bootcamp",
+        boardName: "Example Project Board",
+        boardDescription: "Pre-Seeded project board for presentation",
         user_id: 2,
     },
     {

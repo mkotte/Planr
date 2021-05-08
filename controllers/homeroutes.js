@@ -1,26 +1,43 @@
 const router = require('express').Router();
 const { QueryTypes } = require('sequelize');
 const sequelize = require('../config/connection')
-const { Card, Board, Task, User, UsersXBoards } = require('../models');
+const { Card, Board, Task, User } = require('../models');
 
 // Required middleware for autorization
 const withAuth = require('../utils/auth');
 
-// GET for project page
-router.get('/project/:board', async (req,res) => {
-    // const data2 = await Card.findAll()
-    // console.log(data2)
 
-    const data = await sequelize
-    .query(`SELECT Card.id, Card.title, Card.position, Card.board_id FROM Card 
-    WHERE card.board_id = ${req.params.board} 
-    ORDER BY position`, {type: QueryTypes.SELECT});
-    console.log(data)
-
-    const boardNameData = await Board.findByPk(req.params.board, {raw: true});
-    console.log(boardNameData);
-    res.render('project', {data, boardNameData});
+router.get('/' , async (req, res) => {
+  res.render('homepage')
 })
+
+// router.get(`/user`, withAuth, async (req,res) => {
+//   const boardData = await Board.findAll({ where: {userId: req.session.user_id}, raw: true})
+//   const userData = await User.findByPk(req.session.user_id, {raw: true, attributes: { exclude: ['password'] }})
+
+//   res.render('user', {boardData, userData, 
+//     logged_in: true
+//   })
+// });
+
+
+// // GET for project page
+// router.get('/project/:board', withAuth, async (req,res) => {
+//     // const data2 = await Card.findAll()
+//     // console.log(data2)
+
+//     const data = await sequelize
+//     .query(`SELECT Card.id, Card.title, Card.position, Card.board_id FROM Card 
+//     WHERE card.board_id = ${req.params.board} 
+//     ORDER BY position`, {type: QueryTypes.SELECT});
+//     console.log(data)
+
+//     const boardNameData = await Board.findByPk(req.params.board, {raw: true});
+//     console.log(boardNameData);
+//     res.render('project', {data, boardNameData,
+//       logged_in: req.session.logged_in
+//     });
+// })
 
 router.get('/user/:id', async (req,res) => {
     const boardData = await Board.findAll({ where: {userId: req.params.id}, raw: true})
@@ -33,12 +50,25 @@ router.get('/user/:id', async (req,res) => {
 
 });
 
-router.get('/' , async (req, res) => {
-  res.render('homepage')
+// GET for project page
+router.get('/project/:board', async (req,res) => {
+
+  const data = await sequelize
+  .query(`SELECT Card.id, Card.title, Card.position, Card.board_id FROM Card 
+  WHERE card.board_id = ${req.params.board} 
+  ORDER BY position`, {type: QueryTypes.SELECT});
+  console.log(data)
+
+  const boardNameData = await Board.findByPk(req.params.board, {raw: true});
+  console.log(boardNameData);
+  res.render('project', {data, boardNameData});
 })
 
+
+
+
 // Prevent non logged in users from viewing the homepage
-// router.get('/', withAuth, async (req, res) => {
+// router.get('/user', withAuth, async (req, res) => {
 //     try {
 //       const userData = await User.findAll({
 //         attributes: { exclude: ['password'] },
@@ -47,7 +77,7 @@ router.get('/' , async (req, res) => {
   
 //       const users = userData.map((project) => project.get({ plain: true }));
   
-//       res.render('homepage', {
+//       res.render(`users/${req.session.userId}`, {
 //         users,
 //         // Pass the logged in flag to the template
 //         logged_in: req.session.logged_in,
