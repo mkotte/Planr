@@ -46,7 +46,7 @@ Mike - flex
 
 ### Day 5 - Final Working Day
 FINISHED BY END OF DAY
-* Login / Authentication (DONE!)
+* Login / Authentication (Not Done, Started)
 * Project + Users page appending / sourcing correct information (DONE - I THINK) 1
 * Form's for new project's + tasks are working and completed (TODO:) 3
 * Seeds are professional and thorough for presentation (TODO:) 2
