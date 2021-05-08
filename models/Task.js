@@ -22,15 +22,6 @@ Task.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
-        // * Positions (x + y needed integer)
-        positionX: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        positionY: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         // * Card ID (FK)
         card_id: {
             type: DataTypes.INTEGER,

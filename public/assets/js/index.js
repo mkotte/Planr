@@ -3,6 +3,10 @@ const init = () => {
     fetch("/api/tasks").then(data => data.json()).then(dataObj => createTasks(dataObj))
 }
 
+const refreshTasks = () => {
+    
+}
+
 // Creating tasks and assigning them to the proper cards/columns
 const createTasks = (data) => {
     for (let i = 0; i < data.length; i++){ 
@@ -23,7 +27,7 @@ const createTasks = (data) => {
         taskDescription.textContent = data[i].description;
         taskWrapper.appendChild(taskDescription); 
         const taskList1 = document.querySelector('.task-list-1')
-        console.log(taskList1)
+        
     
     }
     makeSortable();
@@ -243,19 +247,60 @@ const makeSortable = () => {
         }
     });
 
-}
- 
+}   
+
 //function to save new position of dragged element
+window.onload=function(){
 
+    
+}
 
+const handleNewTask = (el) => {
+    const newTask = {
+        title: document.getElementById(`newTaskTitle-${el}`).value,
+        description: document.getElementById(`newTaskDescriptions-${el}`).value,
+        card_id: el,
+    };
+    createNewTask(newTask);
+    init();
+}   
 
+const createNewTask = (el) => {
+    fetch('/api/tasks', {
+        method: 'post',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(el),
+    })
+}
+
+const newTaskSubmit1 = document.getElementById('newTaskSubmit-1').addEventListener('click',  function(event){
+    event.preventDefault();
+    handleNewTask(1)
+});
+
+const newTaskSubmit2 = document.getElementById('newTaskSubmit-2').addEventListener('click', function(event){
+    event.preventDefault();
+    handleNewTask(2)
+});
+
+const newTaskSubmit3 = document.getElementById('newTaskSubmit-3').addEventListener('click', function(event){
+    event.preventDefault();
+    handleNewTask(3);
+});
+
+const newTaskSubmit4 = document.getElementById('newTaskSubmit-4').addEventListener('click', function(event){
+    event.preventDefault();
+    handleNewTask(4);
+});
+
+const newTaskSubmit5 = document.getElementById('newTaskSubmit-5').addEventListener('click', function(event){
+    event.preventDefault();
+    handleNewTask(5);
+});
+
+            
 
 // TODO: add event listeners (bottom) for button presses (i.e. login, project boards etc)
-// saveNoteBtn.addEventListener('click', handleNoteSave);
-// newNoteBtn.addEventListener('click', handleNewNoteView);
-// noteTitle.addEventListener('keyup', handleRenderSaveBtn);
-// noteText.addEventListener('keyup', handleRenderSaveBtn);
-
-
-
 init();
