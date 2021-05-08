@@ -251,5 +251,11 @@ const makeSortable = () => {
 
 
 // TODO: add event listeners (bottom) for button presses (i.e. login, project boards etc)
+// saveNoteBtn.addEventListener('click', handleNoteSave);
+// newNoteBtn.addEventListener('click', handleNewNoteView);
+// noteTitle.addEventListener('keyup', handleRenderSaveBtn);
+// noteText.addEventListener('keyup', handleRenderSaveBtn);
+
+
 
 init();
