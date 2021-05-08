@@ -2,7 +2,6 @@ const seedBoard = require('./board-seeds');
 const seedCard = require('./card-seeds');
 const seedTask = require('./task-seeds');
 const seedUser = require('./user-seeds');
-const seedUsersXBoards = require('./user-x-boards')
 
 const sequelize = require('../config/connection');
 const seedAll = async () => {

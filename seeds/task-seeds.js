@@ -33,6 +33,54 @@ const taskData = [
         positionY: 0,
         card_id: 3
     },
+    {
+        id: 5,
+        title: "big-task",
+        description: "we do a big task here",
+        positionX: 0,
+        positionY: 1,
+        card_id: 2,
+    },
+    {
+        id: 6,
+        title: "big-task",
+        description: "we do a big task here",
+        positionX: 0,
+        positionY: 3,
+        card_id: 1,
+    },
+    {
+        id: 7,
+        title: "big-task",
+        description: "we do a big task here",
+        positionX: 0,
+        positionY: 4,
+        card_id: 1,
+    },
+    {
+        id: 8,
+        title: "big-task",
+        description: "we do a big task here",
+        positionX: 0,
+        positionY: 2,
+        card_id: 3,
+    },
+    {
+        id: 9,
+        title: "big-task",
+        description: "we do a big task here",
+        positionX: 0,
+        positionY: 0,
+        card_id: 1,
+    },
+    {
+        id: 10,
+        title: "big-task",
+        description: "we do a big task here",
+        positionX: 0,
+        positionY: 0,
+        card_id: 1,
+    }
 ];
 
 const seedTask = () => Task.bulkCreate(taskData);

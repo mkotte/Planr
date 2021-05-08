@@ -3,7 +3,6 @@ const Board = require('./Board');
 const Card = require('./Card');
 const Task = require('./Task');
 const User = require('./User');
-const UsersXBoards = require('./UsersXBoards')
 
 // board-card associations
 Card.belongsTo(Board, {

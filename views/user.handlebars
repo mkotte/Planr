@@ -5,14 +5,14 @@
 
 <main>
     <div>
-        <h2>
+        <h2 class="user-name">
             {{userData.username}}
         </h2>
     </div>
     <div class="project wrapper">
         {{#each boardData}}
         
-        <div class="project-{{id}}">
+        <div class="project project-{{id}}">
             {{!-- folder or project icon goes here --}}
             <div class="projectName">
                 <a  href="/project/{{id}}">{{boardName}}</a>
