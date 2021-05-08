@@ -25,9 +25,13 @@ DROP TABLE IF EXISTS `board`;
 CREATE TABLE `board` (
   `id` int NOT NULL AUTO_INCREMENT,
   `board_name` varchar(255) NOT NULL,
+  `board_description` varchar(255) NOT NULL,
+  `user_id` int DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `board_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,7 +41,7 @@ CREATE TABLE `board` (
 
 LOCK TABLES `board` WRITE;
 /*!40000 ALTER TABLE `board` DISABLE KEYS */;
-INSERT INTO `board` VALUES (1,'Project 1','2021-05-06 19:18:51','2021-05-06 19:18:51'),(2,'Project 2','2021-05-06 19:18:51','2021-05-06 19:18:51'),(3,'Project 3','2021-05-06 19:18:51','2021-05-06 19:18:51');
+INSERT INTO `board` VALUES (1,'Example Project Board','Pre-Seeded project board for presentation',2,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(2,'Project 2','Planr - a project management (kanban style) application',1,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(3,'Project 3','Soon to be the best project like ever.',2,'2021-05-08 15:48:29','2021-05-08 15:48:29');
 /*!40000 ALTER TABLE `board` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,7 +71,7 @@ CREATE TABLE `card` (
 
 LOCK TABLES `card` WRITE;
 /*!40000 ALTER TABLE `card` DISABLE KEYS */;
-INSERT INTO `card` VALUES (1,'Completed',3,1,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(2,'In Progress',2,1,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(3,'To-Do',1,1,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(4,'Resources',5,1,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(5,'Done + Reviewed',4,1,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(6,'Title1',3,2,'2021-05-06 19:18:51','2021-05-06 19:18:51');
+INSERT INTO `card` VALUES (1,'Completed',3,1,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(2,'In Progress',2,1,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(3,'To-Do',1,1,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(4,'Resources',5,1,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(5,'Done + Reviewed',4,1,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(6,'Title1',3,2,'2021-05-08 15:48:29','2021-05-08 15:48:29');
 /*!40000 ALTER TABLE `card` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +98,7 @@ CREATE TABLE `session` (
 
 LOCK TABLES `session` WRITE;
 /*!40000 ALTER TABLE `session` DISABLE KEYS */;
-INSERT INTO `session` VALUES ('CqiaWTkFFCNTNTIqunEsSB8gkH8lZJ7A','2021-05-06 21:20:22','{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"}}','2021-05-05 00:55:54','2021-05-05 21:20:22');
+INSERT INTO `session` VALUES ('nTAN7m1T5ws0l1RwE94W1iDTGwIOKHPs','2021-05-09 11:25:44','{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"logged_in\":true}','2021-05-08 10:34:23','2021-05-08 11:25:44'),('qQK-XCJyAzjhJ-hoEIiY9m1jXW4I67V-','2021-05-09 16:38:27','{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"logged_in\":true}','2021-05-07 01:24:21','2021-05-08 16:38:27');
 /*!40000 ALTER TABLE `session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,15 +113,13 @@ CREATE TABLE `task` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `position_x` int NOT NULL,
-  `position_y` int NOT NULL,
   `card_id` int DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `card_id` (`card_id`),
   CONSTRAINT `task_ibfk_1` FOREIGN KEY (`card_id`) REFERENCES `card` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +128,7 @@ CREATE TABLE `task` (
 
 LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
-INSERT INTO `task` VALUES (1,'little task','we do a little task here',2,1,1,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(2,'medium task','we do a medium task here',0,0,2,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(3,'big-task','we do a big task here',0,0,1,'2021-05-06 19:18:51','2021-05-06 19:18:51'),(4,'woah','w0o0o0o0o0o0o0o0o0o0o0o0o0o0o0ah',0,0,3,'2021-05-06 19:18:51','2021-05-06 19:18:51');
+INSERT INTO `task` VALUES (1,'Little Task','We have a little task here',3,'2021-05-08 15:48:29','2021-05-08 16:09:52'),(2,'Medium Task','We have a medium task here',2,'2021-05-08 15:48:29','2021-05-08 15:48:29'),(3,'Big Task','We have a big task here',1,'2021-05-08 15:48:29','2021-05-08 16:38:23'),(4,'Woah','This drag and drop functionality is sort of cool..!',4,'2021-05-08 15:48:29','2021-05-08 16:09:01'),(5,'Huge Task','we have a huge task here',1,'2021-05-08 15:48:29','2021-05-08 16:10:01'),(6,'Tiny Task','we cant find the tiny task here, its too small',3,'2021-05-08 15:48:29','2021-05-08 16:09:58'),(7,'Wait','Did I mention the drag and drop functionality is super cool?',4,'2021-05-08 15:48:29','2021-05-08 15:48:29');
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +146,7 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,8 +155,32 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'jrutter','jrutter@email.email','jrpassword!'),(2,'schimmoeller','mschimmoeller@email.com','mspassword@'),(3,'mkotte','mkotte@email.email','mkpassword#'),(4,'adecapite','adecapite@email.email','adpassword$');
+INSERT INTO `user` VALUES (1,'jrutter','jrutter@email.email','$2b$10$eOQkH2YrBXCph4Ij25kA3uLwNoORLNsmk7KBed4C1DuXEG6rkDlYu'),(2,'mkotte','mkotte@email.email','$2b$10$he.18ibj/2KxqMjDDEmXLenEafc8IRLFjr9VxEgIwHbTKJeRHV0YC'),(3,'schimmoeller','mschimmoeller@email.com','$2b$10$vjSTp7Fm4/FIekpQNTQZQe.vAHOKoyK9hUsRZ/7f.AdChbujbDrUK'),(4,'adecapite','adecapite@email.email','$2b$10$vXznKpB3mZooZXm29zW4J.ECRaF9NHbdf07PZwbr1ukaG6mLyp5C6'),(5,'hersheyp','harshp@email.com','$2b$10$bO6ISDFhEemsv.DBd.5KRO8dhF5JCiSgYTLvtQgXWbEoeQwC9Q2SC');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usersxboards`
+--
+
+DROP TABLE IF EXISTS `usersxboards`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `usersxboards` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usersxboards`
+--
+
+LOCK TABLES `usersxboards` WRITE;
+/*!40000 ALTER TABLE `usersxboards` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usersxboards` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -166,4 +192,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-06 15:25:50
+-- Dump completed on 2021-05-08 12:41:57
