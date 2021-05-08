@@ -166,12 +166,29 @@ body {
   border:1px black solid;
   border-radius: 8px;
   margin: 2px 0;
-  padding: 5px 0 0 5px;
+  padding: 5px;
   background-color: lightgrey;
 }
 
 .new-task{
   float:right;
+}
+
+.project{
+  background-color: lightgrey;
+  border:1px black solid;
+  border-radius: 8px;
+  margin: 10px 10px;
+  padding: 5px;
+}
+
+.board-title-wrapper{
+  padding:20px;
+}
+
+.user-name{
+  text-align: left;
+  font-size:3rem;
 }
 
 /*  Project page media queries

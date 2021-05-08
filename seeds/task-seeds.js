@@ -28,13 +28,13 @@ const taskData = [
     {
         id: 5,
         title: "Huge Task",
-        description: "we have a huge task here",
+        description: "We have a huge task here",
         card_id: 1,
     },
     {
         id: 6,
         title: "Tiny Task",
-        description: "we cant find the tiny task here, its too small",
+        description: "We cant find the tiny task here, its too small",
         card_id: 3,
     },
     {

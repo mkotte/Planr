@@ -3,19 +3,24 @@
 
 {{!-- navbar goes here --}}
 
-<main>
+<main class="container-fluid">
     <div>
         <h2 class="user-name">
-            {{userData.username}}
+            {{userData.username}}/projects
         </h2>
     </div>
-    <div class="project wrapper">
+    <div class="projects wrapper row">
         {{#each boardData}}
         
-        <div class="project project-{{id}}">
-            {{!-- folder or project icon goes here --}}
-            <div class="projectName">
-                <a  href="/project/{{id}}">{{boardName}}</a>
+        <div class="project col-4 project-{{id}}">
+            <div class="projectHeader">
+                <div class="projectIcon ">
+                    <i class="far fa-folder"></i>
+                </div>
+                {{!-- folder or project icon goes here --}}
+                <div class="projectName ">
+                    <a  href="/project/{{id}}">{{boardName}}</a>
+                </div>
             </div>
             <div class="projectDescription">{{boardDescription}}</div>
         </div>
