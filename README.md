@@ -44,26 +44,12 @@ Mitch - backend / db focus
 Mike - flex
 
 
-### Day 5 - Final Working Day
-FINISHED BY END OF DAY
-* Login / Authentication (Not Done, Started)
-* Project + Users page appending / sourcing correct information (DONE - I THINK) 1
-* Form's for new project's + tasks are working and completed (TODO:) 3 - Tasks form finished.
-* Seeds are professional and thorough for presentation (TODO:) 2
-* Homepage finalized + finished (DONE)
-* Drag-n-drop functionality (started, needs linked and to save updated positions onEnd()) (WIP) 3
-* Updating per users (TODO: maybe) 4
-* Deployed to Heroku (Done)
+### Linkshttps:
+Deployed Hompage: https://shielded-refuge-98877.herokuapp.com/ 
+Deployed User/Project Page: https://shielded-refuge-98877.herokuapp.com/user/2
+Repository: https://github.com/mkotte/project2/edit/main/README.md
 
-FINISHED BY DAY 6
-* CSS/Styling
-* Presentation Slide
-* Professional README + Comments
-
-
-
-[MVP Goal / reference](https://kanbanflow.com/)
-
+[Presentation Slides](https://docs.google.com/presentation/d/14IXK220nG1OUeiicxM6DjQ0yp-cH7rdON_23KG40uWY/edit#slide=id.p)
 [Simple WireFrame](https://docs.google.com/presentation/d/1TeOepEL9TuoyOichqtosXRYTOqUkCyeTl7oAkW3Yi5U/edit?usp=sharing)
 
 
