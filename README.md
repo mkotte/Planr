@@ -50,7 +50,7 @@ Mitch - backend / db focus
 
 Mike - everything
 
-### Linkshttps:
+### Links:
 Deployed Hompage: https://shielded-refuge-98877.herokuapp.com/ 
 Deployed User/Project Page: https://shielded-refuge-98877.herokuapp.com/user/2
 Repository: https://github.com/mkotte/project2/edit/main/README.md
