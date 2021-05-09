@@ -1,6 +1,6 @@
 # Project Idea
 ## Project Management System (ex: trello.com)
-### Technology To Use
+### Technology Used
 * Bootstrap -CSS-  
 * MYSQl (Sequelize(ORM), + Professional Appearing Seed File's)
 * Express (Handlebars.js)
@@ -15,9 +15,16 @@
 * Multiple in depth options for post/task content (i.e. comment's, checklists, due dates, assigned users etc)
 * Login required for collaboration and save, otherwise not neccessary
 * Professional appearance 
-* Responsive UI
+* Responsive UI 
 
-### Next Level Extra's
+### Achieved / Completed Functionality 
+* Drag and drop functionality
+* Deployement
+* Server and API's working as expected 
+* Ability to create new tasks and automatically save them
+* Using Handlebars and frontend JavaScript to append database information onto the project and user pages
+
+### Next Level Extra's (i.e Future Developement)
 * Notification's for new task assignment's, completions etc
 * Notification option's (could use email or text notifications)
 * Tutorial for first time users (think similar to GitHub) 
@@ -28,7 +35,7 @@
 
 ### Difficulties / Uncharted Territories
 * Updating for multiples user's 
-* Login authentication's, how to store the information
+* Login authentication's, how to properly store the information
 * Drag and Drop Functionality
 * HandleBars Frame
 * Project Scope
@@ -41,8 +48,7 @@ Jesse - backend routing / html focus
 
 Mitch - backend / db focus
 
-Mike - flex
-
+Mike - everything
 
 ### Linkshttps:
 Deployed Hompage: https://shielded-refuge-98877.herokuapp.com/ 
